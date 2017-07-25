@@ -175,7 +175,7 @@ export class TooltipDirective implements OnDestroy {
     }
   }
 
-  private createBoundOptions(): any {
+  protected createBoundOptions(): any {
     return {
       title: this.tooltipTitle,
       template: this.tooltipTemplate,
