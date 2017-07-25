@@ -1,7 +1,7 @@
 import { SimpleChanges, EventEmitter, OnChanges } from '@angular/core';
 import { LocationStrategy } from '@angular/common';
 export declare class CircleSeriesComponent implements OnChanges {
-    private location;
+    location: LocationStrategy;
     data: any;
     type: string;
     xScale: any;

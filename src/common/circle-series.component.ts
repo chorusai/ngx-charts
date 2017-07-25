@@ -92,7 +92,7 @@ export class CircleSeriesComponent implements OnChanges {
   areaPath: any;
   circles: any[];
 
-  constructor(private location: LocationStrategy) {
+  constructor(public location: LocationStrategy) {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
