@@ -51,14 +51,15 @@ export class XAxisComponent implements OnChanges {
   @Input() labelText;
   @Input() xAxisTickInterval;
   @Input() xAxisTickCount: any;
+  @Input() xOrient: string = 'bottom';
 
   @Output() dimensionsChanged = new EventEmitter();
 
   xAxisClassName: string = 'x axis';
-  xOrient: string = 'bottom';
+
   tickArguments: any;
   transform: any;
-  labelOffset: number = 80;
+  labelOffset: number = 0;
   fill: string = 'none';
   stroke: string = 'stroke';
   tickStroke: string = '#ccc';

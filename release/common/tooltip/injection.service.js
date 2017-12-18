@@ -1,4 +1,13 @@
-import { ApplicationRef, ComponentFactoryResolver, Injectable, Injector, } from '@angular/core';
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+import { ApplicationRef, ComponentFactoryResolver, Injectable, Injector } from '@angular/core';
 /**
  * Injection service is a helper to append components
  * dynamically to a known location in the DOM, most
@@ -7,19 +16,19 @@ import { ApplicationRef, ComponentFactoryResolver, Injectable, Injector, } from 
  * @export
  * @class InjectionService
  */
-var InjectionService = (function () {
+var InjectionService = /** @class */ (function () {
     function InjectionService(applicationRef, componentFactoryResolver, injector) {
         this.applicationRef = applicationRef;
         this.componentFactoryResolver = componentFactoryResolver;
         this.injector = injector;
     }
     /**
-   * Gets the root view container to inject the component to.
-   *
-   * @returns {ComponentRef<any>}
-   *
-   * @memberOf InjectionService
-   */
+     * Gets the root view container to inject the component to.
+     *
+     * @returns {ComponentRef<any>}
+     *
+     * @memberOf InjectionService
+     */
     InjectionService.prototype.getRootViewContainer = function () {
         var rootComponents = this.applicationRef.components;
         // fix cannot read length of undefined
@@ -32,58 +41,56 @@ var InjectionService = (function () {
         throw new Error('View Container not found! ngUpgrade needs to manually set this via setRootViewContainer.');
     };
     /**
-   * Overrides the default root view container. This is useful for
-   * things like ngUpgrade that doesn't have a ApplicationRef root.
-   *
-   * @param {any} container
-   *
-   * @memberOf InjectionService
-   */
+     * Overrides the default root view container. This is useful for
+     * things like ngUpgrade that doesn't have a ApplicationRef root.
+     *
+     * @param {any} container
+     *
+     * @memberOf InjectionService
+     */
     InjectionService.prototype.setRootViewContainer = function (container) {
         this._container = container;
     };
     /**
-   * Gets the html element for a component ref.
-   *
-   * @param {ComponentRef<any>} componentRef
-   * @returns {HTMLElement}
-   *
-   * @memberOf InjectionService
-   */
+     * Gets the html element for a component ref.
+     *
+     * @param {ComponentRef<any>} componentRef
+     * @returns {HTMLElement}
+     *
+     * @memberOf InjectionService
+     */
     InjectionService.prototype.getComponentRootNode = function (componentRef) {
         // the top most component root node has no `hostView`
         if (!componentRef.hostView)
             return componentRef.element.nativeElement;
-        return componentRef.hostView
-            .rootNodes[0];
+        return componentRef.hostView.rootNodes[0];
     };
     /**
-   * Gets the root component container html element.
-   *
-   * @returns {HTMLElement}
-   *
-   * @memberOf InjectionService
-   */
+     * Gets the root component container html element.
+     *
+     * @returns {HTMLElement}
+     *
+     * @memberOf InjectionService
+     */
     InjectionService.prototype.getRootViewContainerNode = function () {
         return this.getComponentRootNode(this.getRootViewContainer());
     };
     /**
-   * Projects the bindings onto the component
-   *
-   * @param {ComponentRef<any>} component
-   * @param {*} options
-   * @returns {ComponentRef<any>}
-   *
-   * @memberOf InjectionService
-   */
+     * Projects the bindings onto the component
+     *
+     * @param {ComponentRef<any>} component
+     * @param {*} options
+     * @returns {ComponentRef<any>}
+     *
+     * @memberOf InjectionService
+     */
     InjectionService.prototype.projectComponentBindings = function (component, bindings) {
         if (bindings) {
             if (bindings.inputs !== undefined) {
                 var bindingKeys = Object.getOwnPropertyNames(bindings.inputs);
                 for (var _i = 0, bindingKeys_1 = bindingKeys; _i < bindingKeys_1.length; _i++) {
                     var bindingName = bindingKeys_1[_i];
-                    component.instance[bindingName] =
-                        bindings.inputs[bindingName];
+                    component.instance[bindingName] = bindings.inputs[bindingName];
                 }
             }
             if (bindings.outputs !== undefined) {
@@ -97,16 +104,16 @@ var InjectionService = (function () {
         return component;
     };
     /**
-   * Appends a component to a adjacent location
-   *
-   * @template T
-   * @param {Type<T>} componentClass
-   * @param {*} [options={}]
-   * @param {Element} [location=this.getRootViewContainerNode()]
-   * @returns {ComponentRef<any>}
-   *
-   * @memberOf InjectionService
-   */
+     * Appends a component to a adjacent location
+     *
+     * @template T
+     * @param {Type<T>} componentClass
+     * @param {*} [options={}]
+     * @param {Element} [location=this.getRootViewContainerNode()]
+     * @returns {ComponentRef<any>}
+     *
+     * @memberOf InjectionService
+     */
     InjectionService.prototype.appendComponent = function (componentClass, bindings, location) {
         if (bindings === void 0) { bindings = {}; }
         if (location === void 0) { location = this.getRootViewContainerNode(); }
@@ -125,16 +132,13 @@ var InjectionService = (function () {
         renderer.projectNodes(location, [componentRootNode]);
         return componentRef;
     };
+    InjectionService = __decorate([
+        Injectable(),
+        __metadata("design:paramtypes", [ApplicationRef,
+            ComponentFactoryResolver,
+            Injector])
+    ], InjectionService);
     return InjectionService;
 }());
 export { InjectionService };
-InjectionService.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-InjectionService.ctorParameters = function () { return [
-    { type: ApplicationRef, },
-    { type: ComponentFactoryResolver, },
-    { type: Injector, },
-]; };
 //# sourceMappingURL=injection.service.js.map
