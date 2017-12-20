@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, TemplateRef } from '@angular/core';
-var TreeMapCellSeriesComponent = /** @class */ (function () {
+var TreeMapCellSeriesComponent = (function () {
     function TreeMapCellSeriesComponent() {
         this.gradient = false;
         this.tooltipDisabled = false;
@@ -53,54 +53,54 @@ var TreeMapCellSeriesComponent = /** @class */ (function () {
     TreeMapCellSeriesComponent.prototype.trackBy = function (index, item) {
         return item.label;
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellSeriesComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellSeriesComponent.prototype, "dims", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellSeriesComponent.prototype, "colors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellSeriesComponent.prototype, "valueFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellSeriesComponent.prototype, "labelFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TreeMapCellSeriesComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TreeMapCellSeriesComponent.prototype, "tooltipDisabled", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", TemplateRef)
-    ], TreeMapCellSeriesComponent.prototype, "tooltipTemplate", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TreeMapCellSeriesComponent.prototype, "animations", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], TreeMapCellSeriesComponent.prototype, "select", void 0);
-    TreeMapCellSeriesComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-tree-map-cell-series]',
-            template: "\n    <svg:g ngx-charts-tree-map-cell *ngFor=\"let c of cells; trackBy:trackBy\"\n      [data]=\"c\"\n      [x]=\"c.x\"\n      [y]=\"c.y\"\n      [width]=\"c.width\"\n      [height]=\"c.height\"\n      [fill]=\"c.fill\"\n      [label]=\"c.label\"\n      [value]=\"c.value\"\n      [valueType]=\"c.valueType\"\n      [valueFormatting]=\"valueFormatting\"\n      [labelFormatting]=\"labelFormatting\"\n      [gradient]=\"gradient\"\n      [animations]=\"animations\"\n      (select)=\"onClick($event)\"\n      ngx-tooltip\n      [tooltipDisabled]=\"tooltipDisabled\"\n      [tooltipPlacement]=\"'top'\"\n      [tooltipType]=\"'tooltip'\"\n      [tooltipTitle]=\"tooltipTemplate ? undefined : getTooltipText(c)\"\n      [tooltipTemplate]=\"tooltipTemplate\"\n      [tooltipContext]=\"c.data\">\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        })
-    ], TreeMapCellSeriesComponent);
     return TreeMapCellSeriesComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellSeriesComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellSeriesComponent.prototype, "dims", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellSeriesComponent.prototype, "colors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellSeriesComponent.prototype, "valueFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellSeriesComponent.prototype, "labelFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TreeMapCellSeriesComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TreeMapCellSeriesComponent.prototype, "tooltipDisabled", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", TemplateRef)
+], TreeMapCellSeriesComponent.prototype, "tooltipTemplate", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TreeMapCellSeriesComponent.prototype, "animations", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], TreeMapCellSeriesComponent.prototype, "select", void 0);
+TreeMapCellSeriesComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-tree-map-cell-series]',
+        template: "\n    <svg:g ngx-charts-tree-map-cell *ngFor=\"let c of cells; trackBy:trackBy\"\n      [data]=\"c\"\n      [x]=\"c.x\"\n      [y]=\"c.y\"\n      [width]=\"c.width\"\n      [height]=\"c.height\"\n      [fill]=\"c.fill\"\n      [label]=\"c.label\"\n      [value]=\"c.value\"\n      [valueType]=\"c.valueType\"\n      [valueFormatting]=\"valueFormatting\"\n      [labelFormatting]=\"labelFormatting\"\n      [gradient]=\"gradient\"\n      [animations]=\"animations\"\n      (select)=\"onClick($event)\"\n      ngx-tooltip\n      [tooltipDisabled]=\"tooltipDisabled\"\n      [tooltipPlacement]=\"'top'\"\n      [tooltipType]=\"'tooltip'\"\n      [tooltipTitle]=\"tooltipTemplate ? undefined : getTooltipText(c)\"\n      [tooltipTemplate]=\"tooltipTemplate\"\n      [tooltipContext]=\"c.data\">\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    })
+], TreeMapCellSeriesComponent);
 export { TreeMapCellSeriesComponent };
 //# sourceMappingURL=tree-map-cell-series.component.js.map

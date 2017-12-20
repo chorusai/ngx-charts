@@ -12,7 +12,7 @@ import { select } from 'd3-selection';
 import { invertColor } from '../utils/color-utils';
 import { trimLabel } from '../common/trim-label.helper';
 import { id } from '../utils/id';
-var TreeMapCellComponent = /** @class */ (function () {
+var TreeMapCellComponent = (function () {
     function TreeMapCellComponent(element) {
         this.gradient = false;
         this.animations = true;
@@ -96,71 +96,71 @@ var TreeMapCellComponent = /** @class */ (function () {
             }
         ];
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "fill", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "x", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "y", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "width", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "height", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "label", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "value", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "valueType", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "valueFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "labelFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TreeMapCellComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TreeMapCellComponent.prototype, "animations", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], TreeMapCellComponent.prototype, "select", void 0);
-    TreeMapCellComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-tree-map-cell]',
-            template: "\n    <svg:g>\n      <defs *ngIf=\"gradient\">\n        <svg:g ngx-charts-svg-linear-gradient\n          orientation=\"vertical\"\n          [name]=\"gradientId\"\n          [stops]=\"gradientStops\"\n        />\n      </defs>\n      <svg:rect\n        [attr.fill]=\"gradient ? gradientUrl : fill\"\n        [attr.width]=\"width\"\n        [attr.height]=\"height\"\n        [attr.x]=\"x\"\n        [attr.y]=\"y\"\n        [style.cursor]=\"'pointer'\"\n        class=\"cell\"\n        (click)=\"onClick()\"\n      />\n      <svg:foreignObject\n        *ngIf=\"width >= 70 && height >= 35\"\n        [attr.x]=\"x\"\n        [attr.y]=\"y\"\n        [attr.width]=\"width\"\n        [attr.height]=\"height\"\n        class=\"label\"\n        [style.pointer-events]=\"'none'\">\n        <xhtml:p\n          [style.color]=\"getTextColor()\"\n          [style.height]=\"height + 'px'\"\n          [style.width]=\"width + 'px'\">\n          <xhtml:span class=\"treemap-label\" [innerHTML]=\"formattedLabel\">\n          </xhtml:span>\n          <xhtml:br />\n          <xhtml:span *ngIf=\"animations\"\n            class=\"treemap-val\" \n            ngx-charts-count-up \n            [countTo]=\"value\"\n            [valueFormatting]=\"valueFormatting\">\n          </xhtml:span>\n          <xhtml:span *ngIf=\"!animations\"\n            class=\"treemap-val\">\n            {{formattedValue}}\n          </xhtml:span>\n        </xhtml:p>\n      </svg:foreignObject>\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [ElementRef])
-    ], TreeMapCellComponent);
     return TreeMapCellComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "fill", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "x", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "y", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "width", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "height", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "label", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "value", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "valueType", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "valueFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "labelFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TreeMapCellComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TreeMapCellComponent.prototype, "animations", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], TreeMapCellComponent.prototype, "select", void 0);
+TreeMapCellComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-tree-map-cell]',
+        template: "\n    <svg:g>\n      <defs *ngIf=\"gradient\">\n        <svg:g ngx-charts-svg-linear-gradient\n          orientation=\"vertical\"\n          [name]=\"gradientId\"\n          [stops]=\"gradientStops\"\n        />\n      </defs>\n      <svg:rect\n        [attr.fill]=\"gradient ? gradientUrl : fill\"\n        [attr.width]=\"width\"\n        [attr.height]=\"height\"\n        [attr.x]=\"x\"\n        [attr.y]=\"y\"\n        [style.cursor]=\"'pointer'\"\n        class=\"cell\"\n        (click)=\"onClick()\"\n      />\n      <svg:foreignObject\n        *ngIf=\"width >= 70 && height >= 35\"\n        [attr.x]=\"x\"\n        [attr.y]=\"y\"\n        [attr.width]=\"width\"\n        [attr.height]=\"height\"\n        class=\"label\"\n        [style.pointer-events]=\"'none'\">\n        <xhtml:p\n          [style.color]=\"getTextColor()\"\n          [style.height]=\"height + 'px'\"\n          [style.width]=\"width + 'px'\">\n          <xhtml:span class=\"treemap-label\" [innerHTML]=\"formattedLabel\">\n          </xhtml:span>\n          <xhtml:br />\n          <xhtml:span *ngIf=\"animations\"\n            class=\"treemap-val\" \n            ngx-charts-count-up \n            [countTo]=\"value\"\n            [valueFormatting]=\"valueFormatting\">\n          </xhtml:span>\n          <xhtml:span *ngIf=\"!animations\"\n            class=\"treemap-val\">\n            {{formattedValue}}\n          </xhtml:span>\n        </xhtml:p>\n      </svg:foreignObject>\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], TreeMapCellComponent);
 export { TreeMapCellComponent };
 //# sourceMappingURL=tree-map-cell.component.js.map

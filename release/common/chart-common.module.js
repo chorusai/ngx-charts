@@ -39,32 +39,32 @@ var COMPONENTS = [
     Timeline,
     AdvancedLegendComponent
 ];
-var ChartCommonModule = /** @class */ (function () {
+var ChartCommonModule = (function () {
     function ChartCommonModule() {
     }
-    ChartCommonModule = __decorate([
-        NgModule({
-            providers: [
-                Location,
-                {
-                    provide: LocationStrategy,
-                    useClass: PathLocationStrategy
-                }
-            ],
-            imports: [
-                CommonModule,
-                AxesModule,
-                TooltipModule
-            ],
-            declarations: COMPONENTS.slice(),
-            exports: [
-                CommonModule,
-                AxesModule,
-                TooltipModule
-            ].concat(COMPONENTS)
-        })
-    ], ChartCommonModule);
     return ChartCommonModule;
 }());
+ChartCommonModule = __decorate([
+    NgModule({
+        providers: [
+            Location,
+            {
+                provide: LocationStrategy,
+                useClass: PathLocationStrategy
+            }
+        ],
+        imports: [
+            CommonModule,
+            AxesModule,
+            TooltipModule
+        ],
+        declarations: COMPONENTS.slice(),
+        exports: [
+            CommonModule,
+            AxesModule,
+            TooltipModule
+        ].concat(COMPONENTS)
+    })
+], ChartCommonModule);
 export { ChartCommonModule };
 //# sourceMappingURL=chart-common.module.js.map

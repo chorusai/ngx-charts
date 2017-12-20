@@ -1,13 +1,8 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24,7 +19,7 @@ import { calculateViewDimensions } from '../common/view-dimensions.helper';
 import { ColorHelper } from '../common/color.helper';
 import { BaseChartComponent } from '../common/base-chart.component';
 import { id } from '../utils/id';
-var AreaChartStackedComponent = /** @class */ (function (_super) {
+var AreaChartStackedComponent = (function (_super) {
     __extends(AreaChartStackedComponent, _super);
     function AreaChartStackedComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -343,126 +338,126 @@ var AreaChartStackedComponent = /** @class */ (function (_super) {
         }
         this.activeEntries = [];
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "legend", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], AreaChartStackedComponent.prototype, "legendTitle", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "xAxis", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "yAxis", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "showXAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "showYAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "xAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "yAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "timeline", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], AreaChartStackedComponent.prototype, "showGridLines", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "curve", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], AreaChartStackedComponent.prototype, "activeEntries", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], AreaChartStackedComponent.prototype, "schemeType", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "xAxisTickFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "yAxisTickFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], AreaChartStackedComponent.prototype, "roundDomains", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], AreaChartStackedComponent.prototype, "tooltipDisabled", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "xScaleMin", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AreaChartStackedComponent.prototype, "xScaleMax", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], AreaChartStackedComponent.prototype, "yScaleMin", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], AreaChartStackedComponent.prototype, "yScaleMax", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", EventEmitter)
-    ], AreaChartStackedComponent.prototype, "activate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", EventEmitter)
-    ], AreaChartStackedComponent.prototype, "deactivate", void 0);
-    __decorate([
-        ContentChild('tooltipTemplate'),
-        __metadata("design:type", TemplateRef)
-    ], AreaChartStackedComponent.prototype, "tooltipTemplate", void 0);
-    __decorate([
-        ContentChild('seriesTooltipTemplate'),
-        __metadata("design:type", TemplateRef)
-    ], AreaChartStackedComponent.prototype, "seriesTooltipTemplate", void 0);
-    __decorate([
-        HostListener('mouseleave'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], AreaChartStackedComponent.prototype, "hideCircles", null);
-    AreaChartStackedComponent = __decorate([
-        Component({
-            selector: 'ngx-charts-area-chart-stacked',
-            template: "\n    <ngx-charts-chart\n      [view]=\"[width, height]\"\n      [showLegend]=\"legend\"\n      [legendOptions]=\"legendOptions\"\n      [activeEntries]=\"activeEntries\"\n      [animations]=\"animations\"\n      (legendLabelClick)=\"onClick($event)\"\n      (legendLabelActivate)=\"onActivate($event)\"\n      (legendLabelDeactivate)=\"onDeactivate($event)\">\n      <svg:defs>\n        <svg:clipPath [attr.id]=\"clipPathId\">\n          <svg:rect\n            [attr.width]=\"dims.width + 10\"\n            [attr.height]=\"dims.height + 10\"\n            [attr.transform]=\"'translate(-5, -5)'\"/>\n        </svg:clipPath>\n      </svg:defs>\n      <svg:g [attr.transform]=\"transform\" class=\"area-chart chart\">\n        <svg:g ngx-charts-x-axis\n          *ngIf=\"xAxis\"\n          [xScale]=\"xScale\"\n          [dims]=\"dims\"\n          [showGridLines]=\"showGridLines\"\n          [showLabel]=\"showXAxisLabel\"\n          [labelText]=\"xAxisLabel\"\n          [tickFormatting]=\"xAxisTickFormatting\"\n          (dimensionsChanged)=\"updateXAxisHeight($event)\">\n        </svg:g>\n        <svg:g ngx-charts-y-axis\n          *ngIf=\"yAxis\"\n          [yScale]=\"yScale\"\n          [dims]=\"dims\"\n          [showGridLines]=\"showGridLines\"\n          [showLabel]=\"showYAxisLabel\"\n          [labelText]=\"yAxisLabel\"\n          [tickFormatting]=\"yAxisTickFormatting\"\n          (dimensionsChanged)=\"updateYAxisWidth($event)\">\n        </svg:g>\n        <svg:g [attr.clip-path]=\"clipPath\">\n          <svg:g *ngFor=\"let series of results; trackBy:trackBy\">\n            <svg:g ngx-charts-area-series\n              [xScale]=\"xScale\"\n              [yScale]=\"yScale\"\n              [colors]=\"colors\"\n              [data]=\"series\"\n              [scaleType]=\"scaleType\"\n              [gradient]=\"gradient\"\n              [activeEntries]=\"activeEntries\"\n              stacked=\"true\"\n              [curve]=\"curve\"\n              [animations]=\"animations\"\n            />\n          </svg:g>\n\n          <svg:g *ngIf=\"!tooltipDisabled\" (mouseleave)=\"hideCircles()\">\n            <svg:g ngx-charts-tooltip-area\n              [dims]=\"dims\"\n              [xSet]=\"xSet\"\n              [xScale]=\"xScale\"\n              [yScale]=\"yScale\"\n              [results]=\"results\"\n              [colors]=\"colors\"\n              [tooltipDisabled]=\"tooltipDisabled\"\n              [tooltipTemplate]=\"seriesTooltipTemplate\"\n              (hover)=\"updateHoveredVertical($event)\"\n            />\n\n            <svg:g *ngFor=\"let series of results; trackBy:trackBy\">\n              <svg:g ngx-charts-circle-series\n                type=\"stacked\"\n                [xScale]=\"xScale\"\n                [yScale]=\"yScale\"\n                [colors]=\"colors\"\n                [activeEntries]=\"activeEntries\"\n                [data]=\"series\"\n                [scaleType]=\"scaleType\"\n                [visibleValue]=\"hoveredVertical\"\n                [tooltipDisabled]=\"tooltipDisabled\"\n                [tooltipTemplate]=\"tooltipTemplate\"\n                (select)=\"onClick($event, series)\"\n                (activate)=\"onActivate($event)\"\n                (deactivate)=\"onDeactivate($event)\"\n              />\n            </svg:g>\n          </svg:g>\n        </svg:g>\n      </svg:g>\n      <svg:g ngx-charts-timeline\n        *ngIf=\"timeline && scaleType === 'time'\"\n        [attr.transform]=\"timelineTransform\"\n        [results]=\"results\"\n        [view]=\"[timelineWidth, height]\"\n        [height]=\"timelineHeight\"\n        [scheme]=\"scheme\"\n        [customColors]=\"customColors\"\n        [legend]=\"legend\"\n        [scaleType]=\"scaleType\"\n        (onDomainChange)=\"updateDomain($event)\">\n        <svg:g *ngFor=\"let series of results; trackBy:trackBy\">\n          <svg:g ngx-charts-area-series\n            [xScale]=\"timelineXScale\"\n            [yScale]=\"timelineYScale\"\n            [colors]=\"colors\"\n            [data]=\"series\"\n            [scaleType]=\"scaleType\"\n            [gradient]=\"gradient\"\n            stacked=\"true\"\n            [curve]=\"curve\"\n            [animations]=\"animations\"\n          />\n        </svg:g>\n      </svg:g>\n    </ngx-charts-chart>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush,
-            styleUrls: ['../common/base-chart.component.css'],
-            encapsulation: ViewEncapsulation.None
-        })
-    ], AreaChartStackedComponent);
     return AreaChartStackedComponent;
 }(BaseChartComponent));
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "legend", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], AreaChartStackedComponent.prototype, "legendTitle", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "xAxis", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "yAxis", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "showXAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "showYAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "xAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "yAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "timeline", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], AreaChartStackedComponent.prototype, "showGridLines", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "curve", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], AreaChartStackedComponent.prototype, "activeEntries", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], AreaChartStackedComponent.prototype, "schemeType", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "xAxisTickFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "yAxisTickFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], AreaChartStackedComponent.prototype, "roundDomains", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], AreaChartStackedComponent.prototype, "tooltipDisabled", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "xScaleMin", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AreaChartStackedComponent.prototype, "xScaleMax", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], AreaChartStackedComponent.prototype, "yScaleMin", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], AreaChartStackedComponent.prototype, "yScaleMax", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", EventEmitter)
+], AreaChartStackedComponent.prototype, "activate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", EventEmitter)
+], AreaChartStackedComponent.prototype, "deactivate", void 0);
+__decorate([
+    ContentChild('tooltipTemplate'),
+    __metadata("design:type", TemplateRef)
+], AreaChartStackedComponent.prototype, "tooltipTemplate", void 0);
+__decorate([
+    ContentChild('seriesTooltipTemplate'),
+    __metadata("design:type", TemplateRef)
+], AreaChartStackedComponent.prototype, "seriesTooltipTemplate", void 0);
+__decorate([
+    HostListener('mouseleave'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AreaChartStackedComponent.prototype, "hideCircles", null);
+AreaChartStackedComponent = __decorate([
+    Component({
+        selector: 'ngx-charts-area-chart-stacked',
+        template: "\n    <ngx-charts-chart\n      [view]=\"[width, height]\"\n      [showLegend]=\"legend\"\n      [legendOptions]=\"legendOptions\"\n      [activeEntries]=\"activeEntries\"\n      [animations]=\"animations\"\n      (legendLabelClick)=\"onClick($event)\"\n      (legendLabelActivate)=\"onActivate($event)\"\n      (legendLabelDeactivate)=\"onDeactivate($event)\">\n      <svg:defs>\n        <svg:clipPath [attr.id]=\"clipPathId\">\n          <svg:rect\n            [attr.width]=\"dims.width + 10\"\n            [attr.height]=\"dims.height + 10\"\n            [attr.transform]=\"'translate(-5, -5)'\"/>\n        </svg:clipPath>\n      </svg:defs>\n      <svg:g [attr.transform]=\"transform\" class=\"area-chart chart\">\n        <svg:g ngx-charts-x-axis\n          *ngIf=\"xAxis\"\n          [xScale]=\"xScale\"\n          [dims]=\"dims\"\n          [showGridLines]=\"showGridLines\"\n          [showLabel]=\"showXAxisLabel\"\n          [labelText]=\"xAxisLabel\"\n          [tickFormatting]=\"xAxisTickFormatting\"\n          (dimensionsChanged)=\"updateXAxisHeight($event)\">\n        </svg:g>\n        <svg:g ngx-charts-y-axis\n          *ngIf=\"yAxis\"\n          [yScale]=\"yScale\"\n          [dims]=\"dims\"\n          [showGridLines]=\"showGridLines\"\n          [showLabel]=\"showYAxisLabel\"\n          [labelText]=\"yAxisLabel\"\n          [tickFormatting]=\"yAxisTickFormatting\"\n          (dimensionsChanged)=\"updateYAxisWidth($event)\">\n        </svg:g>\n        <svg:g [attr.clip-path]=\"clipPath\">\n          <svg:g *ngFor=\"let series of results; trackBy:trackBy\">\n            <svg:g ngx-charts-area-series\n              [xScale]=\"xScale\"\n              [yScale]=\"yScale\"\n              [colors]=\"colors\"\n              [data]=\"series\"\n              [scaleType]=\"scaleType\"\n              [gradient]=\"gradient\"\n              [activeEntries]=\"activeEntries\"\n              stacked=\"true\"\n              [curve]=\"curve\"\n              [animations]=\"animations\"\n            />\n          </svg:g>\n\n          <svg:g *ngIf=\"!tooltipDisabled\" (mouseleave)=\"hideCircles()\">\n            <svg:g ngx-charts-tooltip-area\n              [dims]=\"dims\"\n              [xSet]=\"xSet\"\n              [xScale]=\"xScale\"\n              [yScale]=\"yScale\"\n              [results]=\"results\"\n              [colors]=\"colors\"\n              [tooltipDisabled]=\"tooltipDisabled\"\n              [tooltipTemplate]=\"seriesTooltipTemplate\"\n              (hover)=\"updateHoveredVertical($event)\"\n            />\n\n            <svg:g *ngFor=\"let series of results; trackBy:trackBy\">\n              <svg:g ngx-charts-circle-series\n                type=\"stacked\"\n                [xScale]=\"xScale\"\n                [yScale]=\"yScale\"\n                [colors]=\"colors\"\n                [activeEntries]=\"activeEntries\"\n                [data]=\"series\"\n                [scaleType]=\"scaleType\"\n                [visibleValue]=\"hoveredVertical\"\n                [tooltipDisabled]=\"tooltipDisabled\"\n                [tooltipTemplate]=\"tooltipTemplate\"\n                (select)=\"onClick($event, series)\"\n                (activate)=\"onActivate($event)\"\n                (deactivate)=\"onDeactivate($event)\"\n              />\n            </svg:g>\n          </svg:g>\n        </svg:g>\n      </svg:g>\n      <svg:g ngx-charts-timeline\n        *ngIf=\"timeline && scaleType === 'time'\"\n        [attr.transform]=\"timelineTransform\"\n        [results]=\"results\"\n        [view]=\"[timelineWidth, height]\"\n        [height]=\"timelineHeight\"\n        [scheme]=\"scheme\"\n        [customColors]=\"customColors\"\n        [legend]=\"legend\"\n        [scaleType]=\"scaleType\"\n        (onDomainChange)=\"updateDomain($event)\">\n        <svg:g *ngFor=\"let series of results; trackBy:trackBy\">\n          <svg:g ngx-charts-area-series\n            [xScale]=\"timelineXScale\"\n            [yScale]=\"timelineYScale\"\n            [colors]=\"colors\"\n            [data]=\"series\"\n            [scaleType]=\"scaleType\"\n            [gradient]=\"gradient\"\n            stacked=\"true\"\n            [curve]=\"curve\"\n            [animations]=\"animations\"\n          />\n        </svg:g>\n      </svg:g>\n    </ngx-charts-chart>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush,
+        styleUrls: ['../common/base-chart.component.css'],
+        encapsulation: ViewEncapsulation.None
+    })
+], AreaChartStackedComponent);
 export { AreaChartStackedComponent };
 //# sourceMappingURL=area-chart-stacked.component.js.map

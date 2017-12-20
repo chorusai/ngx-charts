@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-var SvgLinearGradientComponent = /** @class */ (function () {
+var SvgLinearGradientComponent = (function () {
     function SvgLinearGradientComponent() {
         this.orientation = 'vertical';
     }
@@ -24,26 +24,26 @@ var SvgLinearGradientComponent = /** @class */ (function () {
             this.y1 = '100%';
         }
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], SvgLinearGradientComponent.prototype, "orientation", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], SvgLinearGradientComponent.prototype, "name", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], SvgLinearGradientComponent.prototype, "stops", void 0);
-    SvgLinearGradientComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-svg-linear-gradient]',
-            template: "\n    <svg:linearGradient\n      [id]=\"name\"\n      [attr.x1]=\"x1\"\n      [attr.y1]=\"y1\"\n      [attr.x2]=\"x2\"\n      [attr.y2]=\"y2\">\n      <svg:stop *ngFor=\"let stop of stops\"\n        [attr.offset]=\"stop.offset + '%'\"\n        [style.stop-color]=\"stop.color\"\n        [style.stop-opacity]=\"stop.opacity\"\n      />\n    </svg:linearGradient>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        })
-    ], SvgLinearGradientComponent);
     return SvgLinearGradientComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], SvgLinearGradientComponent.prototype, "orientation", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], SvgLinearGradientComponent.prototype, "name", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], SvgLinearGradientComponent.prototype, "stops", void 0);
+SvgLinearGradientComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-svg-linear-gradient]',
+        template: "\n    <svg:linearGradient\n      [id]=\"name\"\n      [attr.x1]=\"x1\"\n      [attr.y1]=\"y1\"\n      [attr.x2]=\"x2\"\n      [attr.y2]=\"y2\">\n      <svg:stop *ngFor=\"let stop of stops\"\n        [attr.offset]=\"stop.offset + '%'\"\n        [style.stop-color]=\"stop.color\"\n        [style.stop-opacity]=\"stop.opacity\"\n      />\n    </svg:linearGradient>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    })
+], SvgLinearGradientComponent);
 export { SvgLinearGradientComponent };
 //# sourceMappingURL=svg-linear-gradient.component.js.map

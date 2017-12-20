@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component, Input, Output, EventEmitter, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { select } from 'd3-selection';
 import { id } from '../utils/id';
-var HeatMapCellComponent = /** @class */ (function () {
+var HeatMapCellComponent = (function () {
     function HeatMapCellComponent(element) {
         this.gradient = false;
         this.animations = true;
@@ -54,55 +54,55 @@ var HeatMapCellComponent = /** @class */ (function () {
     HeatMapCellComponent.prototype.onClick = function () {
         this.select.emit(this.data);
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "fill", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "x", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "y", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "width", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "height", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "label", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], HeatMapCellComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], HeatMapCellComponent.prototype, "animations", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], HeatMapCellComponent.prototype, "select", void 0);
-    HeatMapCellComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-heat-map-cell]',
-            template: "\n    <svg:g [attr.transform]=\"transform\" class=\"cell\">\n      <defs *ngIf=\"gradient\">\n        <svg:g ngx-charts-svg-linear-gradient\n          orientation=\"vertical\"\n          [name]=\"gradientId\"\n          [stops]=\"gradientStops\"\n        />\n      </defs>\n      <svg:rect\n        [attr.fill]=\"gradient ? gradientUrl : fill\"\n        rx=\"3\"\n        [attr.width]=\"width\"\n        [attr.height]=\"height\"\n        class=\"cell\"\n        style=\"cursor: pointer\"\n        (click)=\"onClick()\"\n      />\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [ElementRef])
-    ], HeatMapCellComponent);
     return HeatMapCellComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "fill", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "x", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "y", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "width", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "height", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "label", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], HeatMapCellComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], HeatMapCellComponent.prototype, "animations", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], HeatMapCellComponent.prototype, "select", void 0);
+HeatMapCellComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-heat-map-cell]',
+        template: "\n    <svg:g [attr.transform]=\"transform\" class=\"cell\">\n      <defs *ngIf=\"gradient\">\n        <svg:g ngx-charts-svg-linear-gradient\n          orientation=\"vertical\"\n          [name]=\"gradientId\"\n          [stops]=\"gradientStops\"\n        />\n      </defs>\n      <svg:rect\n        [attr.fill]=\"gradient ? gradientUrl : fill\"\n        rx=\"3\"\n        [attr.width]=\"width\"\n        [attr.height]=\"height\"\n        class=\"cell\"\n        style=\"cursor: pointer\"\n        (click)=\"onClick()\"\n      />\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], HeatMapCellComponent);
 export { HeatMapCellComponent };
 //# sourceMappingURL=heat-map-cell.component.js.map

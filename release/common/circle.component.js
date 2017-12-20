@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, HostListener } from '@angular/core';
-var CircleComponent = /** @class */ (function () {
+var CircleComponent = (function () {
     function CircleComponent() {
         this.select = new EventEmitter();
         this.activate = new EventEmitter();
@@ -29,80 +29,80 @@ var CircleComponent = /** @class */ (function () {
             '';
         this.classNames += 'circle';
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "cx", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "cy", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "r", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "fill", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "stroke", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "classNames", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "circleOpacity", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "pointerEvents", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "select", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "activate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CircleComponent.prototype, "deactivate", void 0);
-    __decorate([
-        HostListener('click'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], CircleComponent.prototype, "onClick", null);
-    __decorate([
-        HostListener('mouseenter'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], CircleComponent.prototype, "onMouseEnter", null);
-    __decorate([
-        HostListener('mouseleave'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], CircleComponent.prototype, "onMouseLeave", null);
-    CircleComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-circle]',
-            template: "\n    <svg:circle\n      [attr.cx]=\"cx\"\n      [attr.cy]=\"cy\"\n      [attr.r]=\"r\"\n      [attr.fill]=\"fill\"\n      [attr.stroke]=\"stroke\"\n      [attr.opacity]=\"circleOpacity\"\n      [attr.class]=\"classNames\"\n      [attr.pointer-events]=\"pointerEvents\"\n    />\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        })
-    ], CircleComponent);
     return CircleComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "cx", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "cy", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "r", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "fill", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "stroke", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "classNames", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "circleOpacity", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "pointerEvents", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "select", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "activate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CircleComponent.prototype, "deactivate", void 0);
+__decorate([
+    HostListener('click'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], CircleComponent.prototype, "onClick", null);
+__decorate([
+    HostListener('mouseenter'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], CircleComponent.prototype, "onMouseEnter", null);
+__decorate([
+    HostListener('mouseleave'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], CircleComponent.prototype, "onMouseLeave", null);
+CircleComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-circle]',
+        template: "\n    <svg:circle\n      [attr.cx]=\"cx\"\n      [attr.cy]=\"cy\"\n      [attr.r]=\"r\"\n      [attr.fill]=\"fill\"\n      [attr.stroke]=\"stroke\"\n      [attr.opacity]=\"circleOpacity\"\n      [attr.class]=\"classNames\"\n      [attr.pointer-events]=\"pointerEvents\"\n    />\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    })
+], CircleComponent);
 export { CircleComponent };
 //# sourceMappingURL=circle.component.js.map

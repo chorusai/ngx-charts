@@ -18,28 +18,28 @@ import { NumberCardModule } from './number-card/number-card.module';
 import { PieChartModule } from './pie-chart/pie-chart.module';
 import { TreeMapModule } from './tree-map/tree-map.module';
 import { GaugeModule } from './gauge/gauge.module';
-var NgxChartsModule = /** @class */ (function () {
+var NgxChartsModule = (function () {
     function NgxChartsModule() {
     }
-    NgxChartsModule = __decorate([
-        NgModule({
-            exports: [
-                ChartCommonModule,
-                AreaChartModule,
-                BarChartModule,
-                BubbleChartModule,
-                ForceDirectedGraphModule,
-                HeatMapModule,
-                LineChartModule,
-                PolarChartModule,
-                NumberCardModule,
-                PieChartModule,
-                TreeMapModule,
-                GaugeModule
-            ]
-        })
-    ], NgxChartsModule);
     return NgxChartsModule;
 }());
+NgxChartsModule = __decorate([
+    NgModule({
+        exports: [
+            ChartCommonModule,
+            AreaChartModule,
+            BarChartModule,
+            BubbleChartModule,
+            ForceDirectedGraphModule,
+            HeatMapModule,
+            LineChartModule,
+            PolarChartModule,
+            NumberCardModule,
+            PieChartModule,
+            TreeMapModule,
+            GaugeModule
+        ]
+    })
+], NgxChartsModule);
 export { NgxChartsModule };
 //# sourceMappingURL=ngx-charts.module.js.map

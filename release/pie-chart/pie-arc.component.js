@@ -12,7 +12,7 @@ import { interpolate } from 'd3-interpolate';
 import { select } from 'd3-selection';
 import { arc } from 'd3-shape';
 import { id } from '../utils/id';
-var PieArcComponent = /** @class */ (function () {
+var PieArcComponent = (function () {
     function PieArcComponent(element) {
         this.startAngle = 0;
         this.endAngle = Math.PI * 2;
@@ -103,83 +103,83 @@ var PieArcComponent = /** @class */ (function () {
     PieArcComponent.prototype.onClick = function () {
         this.select.emit(this.data);
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "fill", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], PieArcComponent.prototype, "startAngle", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], PieArcComponent.prototype, "endAngle", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "innerRadius", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "outerRadius", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], PieArcComponent.prototype, "cornerRadius", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "value", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "max", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PieArcComponent.prototype, "explodeSlices", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PieArcComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PieArcComponent.prototype, "animate", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PieArcComponent.prototype, "pointerEvents", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PieArcComponent.prototype, "isActive", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "select", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "activate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], PieArcComponent.prototype, "deactivate", void 0);
-    PieArcComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-pie-arc]',
-            template: "\n    <svg:g class=\"arc-group\">\n      <svg:defs *ngIf=\"gradient\">\n        <svg:g ngx-charts-svg-radial-gradient\n          [color]=\"fill\"\n          orientation=\"vertical\"\n          [name]=\"radialGradientId\"\n          [startOpacity]=\"startOpacity\"\n        />\n      </svg:defs>\n      <svg:path\n        [attr.d]=\"path\"\n        class=\"arc\"\n        [class.active]=\"isActive\"\n        [attr.fill]=\"gradient ? gradientFill : fill\"\n        (click)=\"onClick()\"\n        (mouseenter)=\"activate.emit(data)\"\n        (mouseleave)=\"deactivate.emit(data)\"\n        [style.pointer-events]=\"pointerEvents ? 'auto' : 'none'\"\n      />\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush,
-        }),
-        __metadata("design:paramtypes", [ElementRef])
-    ], PieArcComponent);
     return PieArcComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "fill", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], PieArcComponent.prototype, "startAngle", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], PieArcComponent.prototype, "endAngle", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "innerRadius", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "outerRadius", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], PieArcComponent.prototype, "cornerRadius", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "value", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "max", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PieArcComponent.prototype, "explodeSlices", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PieArcComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PieArcComponent.prototype, "animate", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PieArcComponent.prototype, "pointerEvents", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PieArcComponent.prototype, "isActive", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "select", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "activate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], PieArcComponent.prototype, "deactivate", void 0);
+PieArcComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-pie-arc]',
+        template: "\n    <svg:g class=\"arc-group\">\n      <svg:defs *ngIf=\"gradient\">\n        <svg:g ngx-charts-svg-radial-gradient\n          [color]=\"fill\"\n          orientation=\"vertical\"\n          [name]=\"radialGradientId\"\n          [startOpacity]=\"startOpacity\"\n        />\n      </svg:defs>\n      <svg:path\n        [attr.d]=\"path\"\n        class=\"arc\"\n        [class.active]=\"isActive\"\n        [attr.fill]=\"gradient ? gradientFill : fill\"\n        (click)=\"onClick()\"\n        (mouseenter)=\"activate.emit(data)\"\n        (mouseleave)=\"deactivate.emit(data)\"\n        [style.pointer-events]=\"pointerEvents ? 'auto' : 'none'\"\n      />\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush,
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], PieArcComponent);
 export { PieArcComponent };
 //# sourceMappingURL=pie-arc.component.js.map

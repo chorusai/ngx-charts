@@ -12,7 +12,7 @@ import { throttleable } from '../../utils/throttle';
 import { PositionHelper, PlacementTypes } from './position';
 import { StyleTypes } from './style.type';
 import { AlignmentTypes } from './alignment.type';
-var TooltipContentComponent = /** @class */ (function () {
+var TooltipContentComponent = (function () {
     function TooltipContentComponent(element, renderer) {
         this.element = element;
         this.renderer = renderer;
@@ -65,65 +65,65 @@ var TooltipContentComponent = /** @class */ (function () {
     TooltipContentComponent.prototype.onWindowResize = function () {
         this.position();
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipContentComponent.prototype, "host", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TooltipContentComponent.prototype, "showCaret", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], TooltipContentComponent.prototype, "type", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], TooltipContentComponent.prototype, "placement", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], TooltipContentComponent.prototype, "alignment", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], TooltipContentComponent.prototype, "spacing", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], TooltipContentComponent.prototype, "cssClass", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], TooltipContentComponent.prototype, "title", void 0);
-    __decorate([
-        ViewChild('caretElm'),
-        __metadata("design:type", Object)
-    ], TooltipContentComponent.prototype, "caretElm", void 0);
-    __decorate([
-        HostBinding('class'),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [])
-    ], TooltipContentComponent.prototype, "cssClasses", null);
-    __decorate([
-        HostListener('window:resize'),
-        throttleable(100),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], TooltipContentComponent.prototype, "onWindowResize", null);
-    TooltipContentComponent = __decorate([
-        Component({
-            selector: 'ngx-tooltip-content',
-            template: "\n    <div>\n      <span\n        #caretElm\n        [hidden]=\"!showCaret\"\n        class=\"tooltip-caret position-{{this.placement}}\">\n      </span>\n      <div class=\"tooltip-content\">\n        <span *ngIf=\"!title\">\n          <ng-template\n            [ngTemplateOutlet]=\"template\"\n            [ngTemplateOutletContext]=\"{ model: context }\">\n          </ng-template>\n        </span>\n        <span\n          *ngIf=\"title\"\n          [innerHTML]=\"title\">\n        </span>\n      </div>\n    </div>\n  ",
-            encapsulation: ViewEncapsulation.None,
-            styleUrls: ['./tooltip.component.css']
-        }),
-        __metadata("design:paramtypes", [ElementRef,
-            Renderer])
-    ], TooltipContentComponent);
     return TooltipContentComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipContentComponent.prototype, "host", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TooltipContentComponent.prototype, "showCaret", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], TooltipContentComponent.prototype, "type", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], TooltipContentComponent.prototype, "placement", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], TooltipContentComponent.prototype, "alignment", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], TooltipContentComponent.prototype, "spacing", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], TooltipContentComponent.prototype, "cssClass", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], TooltipContentComponent.prototype, "title", void 0);
+__decorate([
+    ViewChild('caretElm'),
+    __metadata("design:type", Object)
+], TooltipContentComponent.prototype, "caretElm", void 0);
+__decorate([
+    HostBinding('class'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [])
+], TooltipContentComponent.prototype, "cssClasses", null);
+__decorate([
+    HostListener('window:resize'),
+    throttleable(100),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], TooltipContentComponent.prototype, "onWindowResize", null);
+TooltipContentComponent = __decorate([
+    Component({
+        selector: 'ngx-tooltip-content',
+        template: "\n    <div>\n      <span\n        #caretElm\n        [hidden]=\"!showCaret\"\n        class=\"tooltip-caret position-{{this.placement}}\">\n      </span>\n      <div class=\"tooltip-content\">\n        <span *ngIf=\"!title\">\n          <ng-template\n            [ngTemplateOutlet]=\"template\"\n            [ngTemplateOutletContext]=\"{ model: context }\">\n          </ng-template>\n        </span>\n        <span\n          *ngIf=\"title\"\n          [innerHTML]=\"title\">\n        </span>\n      </div>\n    </div>\n  ",
+        encapsulation: ViewEncapsulation.None,
+        styleUrls: ['./tooltip.component.css']
+    }),
+    __metadata("design:paramtypes", [ElementRef,
+        Renderer])
+], TooltipContentComponent);
 export { TooltipContentComponent };
 //# sourceMappingURL=tooltip.component.js.map

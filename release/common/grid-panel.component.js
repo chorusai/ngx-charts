@@ -8,37 +8,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-var GridPanelComponent = /** @class */ (function () {
+var GridPanelComponent = (function () {
     function GridPanelComponent() {
     }
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelComponent.prototype, "path", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelComponent.prototype, "width", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelComponent.prototype, "height", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelComponent.prototype, "x", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelComponent.prototype, "y", void 0);
-    GridPanelComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-grid-panel]',
-            template: "\n    <svg:rect\n      [attr.height]=\"height\"\n      [attr.width]=\"width\"\n      [attr.x]=\"x\"\n      [attr.y]=\"y\"\n      stroke=\"none\"\n      class=\"gridpanel\"\n    />\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        })
-    ], GridPanelComponent);
     return GridPanelComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelComponent.prototype, "path", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelComponent.prototype, "width", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelComponent.prototype, "height", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelComponent.prototype, "x", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelComponent.prototype, "y", void 0);
+GridPanelComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-grid-panel]',
+        template: "\n    <svg:rect\n      [attr.height]=\"height\"\n      [attr.width]=\"width\"\n      [attr.x]=\"x\"\n      [attr.y]=\"y\"\n      stroke=\"none\"\n      class=\"gridpanel\"\n    />\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    })
+], GridPanelComponent);
 export { GridPanelComponent };
 //# sourceMappingURL=grid-panel.component.js.map

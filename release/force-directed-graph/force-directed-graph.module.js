@@ -8,21 +8,21 @@ import { NgModule } from '@angular/core';
 import { ForceDirectedGraphComponent } from './force-directed-graph.component';
 import { ChartCommonModule } from '../common/chart-common.module';
 export { ForceDirectedGraphComponent };
-var ForceDirectedGraphModule = /** @class */ (function () {
+var ForceDirectedGraphModule = (function () {
     function ForceDirectedGraphModule() {
     }
-    ForceDirectedGraphModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule],
-            declarations: [
-                ForceDirectedGraphComponent,
-            ],
-            exports: [
-                ForceDirectedGraphComponent,
-            ]
-        })
-    ], ForceDirectedGraphModule);
     return ForceDirectedGraphModule;
 }());
+ForceDirectedGraphModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule],
+        declarations: [
+            ForceDirectedGraphComponent,
+        ],
+        exports: [
+            ForceDirectedGraphComponent,
+        ]
+    })
+], ForceDirectedGraphModule);
 export { ForceDirectedGraphModule };
 //# sourceMappingURL=force-directed-graph.module.js.map

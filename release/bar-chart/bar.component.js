@@ -11,7 +11,7 @@ import { Component, Input, Output, EventEmitter, HostListener, ElementRef, Chang
 import { select } from 'd3-selection';
 import { roundedRect } from '../common/shape.helper';
 import { id } from '../utils/id';
-var BarComponent = /** @class */ (function () {
+var BarComponent = (function () {
     function BarComponent(element) {
         this.roundEdges = true;
         this.gradient = false;
@@ -169,91 +169,91 @@ var BarComponent = /** @class */ (function () {
     BarComponent.prototype.onMouseLeave = function () {
         this.deactivate.emit(this.data);
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "fill", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "width", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "height", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "x", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "y", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "orientation", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarComponent.prototype, "roundEdges", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "offset", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarComponent.prototype, "isActive", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], BarComponent.prototype, "stops", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarComponent.prototype, "animations", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "select", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "activate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], BarComponent.prototype, "deactivate", void 0);
-    __decorate([
-        HostListener('mouseenter'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], BarComponent.prototype, "onMouseEnter", null);
-    __decorate([
-        HostListener('mouseleave'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], BarComponent.prototype, "onMouseLeave", null);
-    BarComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-bar]',
-            template: "\n    <svg:defs *ngIf=\"hasGradient\">\n      <svg:g ngx-charts-svg-linear-gradient\n        [orientation]=\"orientation\"\n        [name]=\"gradientId\"\n        [stops]=\"gradientStops\"\n      />\n    </svg:defs>\n    <svg:path\n      class=\"bar\"\n      stroke=\"none\"\n      [class.active]=\"isActive\"\n      [attr.d]=\"path\"\n      [attr.fill]=\"hasGradient ? gradientFill : fill\"\n      (click)=\"select.emit(data)\"\n    />\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [ElementRef])
-    ], BarComponent);
     return BarComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "fill", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "width", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "height", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "x", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "y", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "orientation", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarComponent.prototype, "roundEdges", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "offset", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarComponent.prototype, "isActive", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], BarComponent.prototype, "stops", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarComponent.prototype, "animations", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "select", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "activate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], BarComponent.prototype, "deactivate", void 0);
+__decorate([
+    HostListener('mouseenter'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], BarComponent.prototype, "onMouseEnter", null);
+__decorate([
+    HostListener('mouseleave'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], BarComponent.prototype, "onMouseLeave", null);
+BarComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-bar]',
+        template: "\n    <svg:defs *ngIf=\"hasGradient\">\n      <svg:g ngx-charts-svg-linear-gradient\n        [orientation]=\"orientation\"\n        [name]=\"gradientId\"\n        [stops]=\"gradientStops\"\n      />\n    </svg:defs>\n    <svg:path\n      class=\"bar\"\n      stroke=\"none\"\n      [class.active]=\"isActive\"\n      [attr.d]=\"path\"\n      [attr.fill]=\"hasGradient ? gradientFill : fill\"\n      (click)=\"select.emit(data)\"\n    />\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], BarComponent);
 export { BarComponent };
 //# sourceMappingURL=bar.component.js.map

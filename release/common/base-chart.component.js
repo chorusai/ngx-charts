@@ -12,7 +12,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/debounceTime';
 import { VisibilityObserver } from '../utils';
-var BaseChartComponent = /** @class */ (function () {
+var BaseChartComponent = (function () {
     function BaseChartComponent(chartElement, zone, cd) {
         this.chartElement = chartElement;
         this.zone = zone;
@@ -151,44 +151,44 @@ var BaseChartComponent = /** @class */ (function () {
         }
         return results;
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BaseChartComponent.prototype, "results", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], BaseChartComponent.prototype, "view", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BaseChartComponent.prototype, "scheme", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], BaseChartComponent.prototype, "schemeType", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BaseChartComponent.prototype, "customColors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BaseChartComponent.prototype, "animations", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], BaseChartComponent.prototype, "select", void 0);
-    BaseChartComponent = __decorate([
-        Component({
-            selector: 'base-chart',
-            template: "<div></div>"
-        }),
-        __metadata("design:paramtypes", [ElementRef,
-            NgZone,
-            ChangeDetectorRef])
-    ], BaseChartComponent);
     return BaseChartComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BaseChartComponent.prototype, "results", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], BaseChartComponent.prototype, "view", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BaseChartComponent.prototype, "scheme", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], BaseChartComponent.prototype, "schemeType", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BaseChartComponent.prototype, "customColors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BaseChartComponent.prototype, "animations", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], BaseChartComponent.prototype, "select", void 0);
+BaseChartComponent = __decorate([
+    Component({
+        selector: 'base-chart',
+        template: "<div></div>"
+    }),
+    __metadata("design:paramtypes", [ElementRef,
+        NgZone,
+        ChangeDetectorRef])
+], BaseChartComponent);
 export { BaseChartComponent };
 //# sourceMappingURL=base-chart.component.js.map

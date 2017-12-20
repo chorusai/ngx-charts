@@ -1,4 +1,5 @@
 // The export is needed here to generate a valid polyfills.metadata.json file
+// The export is needed here to generate a valid polyfills.metadata.json file
 export function ngxChartsPolyfills() {
     // IE11 fix
     // Ref: https://github.com/swimlane/ngx-charts/issues/386

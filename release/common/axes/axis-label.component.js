@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, ElementRef, ChangeDetectionStrategy } from '@angular/core';
-var AxisLabelComponent = /** @class */ (function () {
+var AxisLabelComponent = (function () {
     function AxisLabelComponent(element) {
         this.textHeight = 25;
         this.margin = 5;
@@ -43,35 +43,35 @@ var AxisLabelComponent = /** @class */ (function () {
             default:
         }
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AxisLabelComponent.prototype, "orient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AxisLabelComponent.prototype, "label", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AxisLabelComponent.prototype, "offset", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AxisLabelComponent.prototype, "width", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], AxisLabelComponent.prototype, "height", void 0);
-    AxisLabelComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-axis-label]',
-            template: "\n    <svg:text\n      [attr.stroke-width]=\"strokeWidth\"\n      [attr.text-anchor]=\"textAnchor\"\n      [attr.x]=\"x\"\n      [attr.y]=\"y\"\n      [attr.text-anchor]=\"textAnchor\"\n      [attr.transform]=\"transform\">\n      {{label}}\n    </svg:text>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [ElementRef])
-    ], AxisLabelComponent);
     return AxisLabelComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AxisLabelComponent.prototype, "orient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AxisLabelComponent.prototype, "label", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AxisLabelComponent.prototype, "offset", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AxisLabelComponent.prototype, "width", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], AxisLabelComponent.prototype, "height", void 0);
+AxisLabelComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-axis-label]',
+        template: "\n    <svg:text\n      [attr.stroke-width]=\"strokeWidth\"\n      [attr.text-anchor]=\"textAnchor\"\n      [attr.x]=\"x\"\n      [attr.y]=\"y\"\n      [attr.text-anchor]=\"textAnchor\"\n      [attr.transform]=\"transform\">\n      {{label}}\n    </svg:text>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], AxisLabelComponent);
 export { AxisLabelComponent };
 //# sourceMappingURL=axis-label.component.js.map

@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-var GridPanelSeriesComponent = /** @class */ (function () {
+var GridPanelSeriesComponent = (function () {
     function GridPanelSeriesComponent() {
     }
     GridPanelSeriesComponent.prototype.ngOnChanges = function (changes) {
@@ -60,34 +60,34 @@ var GridPanelSeriesComponent = /** @class */ (function () {
             };
         });
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelSeriesComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelSeriesComponent.prototype, "dims", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelSeriesComponent.prototype, "xScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelSeriesComponent.prototype, "yScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], GridPanelSeriesComponent.prototype, "orient", void 0);
-    GridPanelSeriesComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-grid-panel-series]',
-            template: "\n    <svg:g ngx-charts-grid-panel *ngFor=\"let gridPanel of gridPanels\"\n      [height]=\"gridPanel.height\"\n      [width]=\"gridPanel.width\"\n      [x]=\"gridPanel.x\"\n      [y]=\"gridPanel.y\"\n      [class.grid-panel]=\"true\"\n      [class.odd]=\"gridPanel.class === 'odd'\"\n      [class.even]=\"gridPanel.class === 'even'\">\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        })
-    ], GridPanelSeriesComponent);
     return GridPanelSeriesComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelSeriesComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelSeriesComponent.prototype, "dims", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelSeriesComponent.prototype, "xScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelSeriesComponent.prototype, "yScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], GridPanelSeriesComponent.prototype, "orient", void 0);
+GridPanelSeriesComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-grid-panel-series]',
+        template: "\n    <svg:g ngx-charts-grid-panel *ngFor=\"let gridPanel of gridPanels\"\n      [height]=\"gridPanel.height\"\n      [width]=\"gridPanel.width\"\n      [x]=\"gridPanel.x\"\n      [y]=\"gridPanel.y\"\n      [class.grid-panel]=\"true\"\n      [class.odd]=\"gridPanel.class === 'odd'\"\n      [class.even]=\"gridPanel.class === 'even'\">\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    })
+], GridPanelSeriesComponent);
 export { GridPanelSeriesComponent };
 //# sourceMappingURL=grid-panel-series.component.js.map

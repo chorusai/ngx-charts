@@ -19,7 +19,7 @@ import { count, decimalChecker } from './count.helper';
  * @export
  * @class CountUpDirective
  */
-var CountUpDirective = /** @class */ (function () {
+var CountUpDirective = (function () {
     function CountUpDirective(cd, element) {
         this.cd = cd;
         this.countDuration = 1;
@@ -86,53 +86,53 @@ var CountUpDirective = /** @class */ (function () {
         };
         this.animationReq = count(this.countFrom, this.countTo, this.countDecimals, this.countDuration, callback);
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], CountUpDirective.prototype, "countDuration", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], CountUpDirective.prototype, "countPrefix", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], CountUpDirective.prototype, "countSuffix", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CountUpDirective.prototype, "valueFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], CountUpDirective.prototype, "countDecimals", null);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], CountUpDirective.prototype, "countTo", null);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], CountUpDirective.prototype, "countFrom", null);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CountUpDirective.prototype, "countChange", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CountUpDirective.prototype, "countFinish", void 0);
-    CountUpDirective = __decorate([
-        Component({
-            selector: '[ngx-charts-count-up]',
-            template: "{{value}}"
-        }),
-        __metadata("design:paramtypes", [ChangeDetectorRef, ElementRef])
-    ], CountUpDirective);
     return CountUpDirective;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], CountUpDirective.prototype, "countDuration", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], CountUpDirective.prototype, "countPrefix", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], CountUpDirective.prototype, "countSuffix", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CountUpDirective.prototype, "valueFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], CountUpDirective.prototype, "countDecimals", null);
+__decorate([
+    Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], CountUpDirective.prototype, "countTo", null);
+__decorate([
+    Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], CountUpDirective.prototype, "countFrom", null);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CountUpDirective.prototype, "countChange", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CountUpDirective.prototype, "countFinish", void 0);
+CountUpDirective = __decorate([
+    Component({
+        selector: '[ngx-charts-count-up]',
+        template: "{{value}}"
+    }),
+    __metadata("design:paramtypes", [ChangeDetectorRef, ElementRef])
+], CountUpDirective);
 export { CountUpDirective };
 //# sourceMappingURL=count.directive.js.map

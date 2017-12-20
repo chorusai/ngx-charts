@@ -5,7 +5,13 @@
  * @param {*} x, y, w, h, r, tl, tr, bl, br
  * @returns {string}
  */
-export function roundedRect(x, y, w, h, r, _a) {
+/**
+ * Generates a rounded rectanglar path
+ *
+ * @export
+ * @param {*} x, y, w, h, r, tl, tr, bl, br
+ * @returns {string}
+ */ export function roundedRect(x, y, w, h, r, _a) {
     var tl = _a[0], tr = _a[1], bl = _a[2], br = _a[3];
     var retval = '';
     retval = "M" + [x + r, y];

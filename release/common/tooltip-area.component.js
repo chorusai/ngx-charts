@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, Input, Output, EventEmitter, ViewChild, Renderer, ChangeDetectionStrategy, TemplateRef, } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations';
-var TooltipArea = /** @class */ (function () {
+var TooltipArea = (function () {
     function TooltipArea(renderer) {
         this.renderer = renderer;
         this.anchorOpacity = 0;
@@ -146,75 +146,75 @@ var TooltipArea = /** @class */ (function () {
         }
         return result;
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "dims", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "xSet", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "xScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "yScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "results", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "colors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TooltipArea.prototype, "showPercentage", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], TooltipArea.prototype, "tooltipDisabled", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", TemplateRef)
-    ], TooltipArea.prototype, "tooltipTemplate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "hover", void 0);
-    __decorate([
-        ViewChild('tooltipAnchor'),
-        __metadata("design:type", Object)
-    ], TooltipArea.prototype, "tooltipAnchor", void 0);
-    TooltipArea = __decorate([
-        Component({
-            selector: 'g[ngx-charts-tooltip-area]',
-            template: "\n    <svg:g>\n      <svg:rect\n        class=\"tooltip-area\"\n        [attr.x]=\"0\"\n        y=\"0\"\n        [attr.width]=\"dims.width\"\n        [attr.height]=\"dims.height\"\n        style=\"opacity: 0; cursor: 'auto';\"\n        (mousemove)=\"mouseMove($event)\"\n        (mouseleave)=\"hideTooltip()\"\n      />\n      <xhtml:ng-template #defaultTooltipTemplate let-model=\"model\">\n        <xhtml:div class=\"area-tooltip-container\">\n          <xhtml:div\n            *ngFor=\"let tooltipItem of model\"\n            class=\"tooltip-item\">\n            <span\n              class=\"tooltip-item-color\"\n              [style.background-color]=\"tooltipItem.color\">\n            </span>\n            {{getToolTipText(tooltipItem)}}\n          </xhtml:div>\n        </xhtml:div>\n      </xhtml:ng-template>\n      <svg:rect\n        #tooltipAnchor\n        [@animationState]=\"anchorOpacity !== 0 ? 'active' : 'inactive'\"\n        class=\"tooltip-anchor\"\n        [attr.x]=\"anchorPos\"\n        y=\"0\"\n        [attr.width]=\"1\"\n        [attr.height]=\"dims.height\"\n        [style.opacity]=\"anchorOpacity\"\n        [style.pointer-events]=\"'none'\"\n        ngx-tooltip\n        [tooltipDisabled]=\"tooltipDisabled\"\n        [tooltipPlacement]=\"'right'\"\n        [tooltipType]=\"'tooltip'\"\n        [tooltipSpacing]=\"15\"\n        [tooltipTemplate]=\"tooltipTemplate ? tooltipTemplate: defaultTooltipTemplate\"\n        [tooltipContext]=\"anchorValues\"\n        [tooltipImmediateExit]=\"true\"\n      />\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush,
-            animations: [
-                trigger('animationState', [
-                    transition('inactive => active', [
-                        style({
-                            opacity: 0,
-                        }),
-                        animate(250, style({ opacity: 0.7 }))
-                    ]),
-                    transition('active => inactive', [
-                        style({
-                            opacity: 0.7,
-                        }),
-                        animate(250, style({ opacity: 0 }))
-                    ])
-                ])
-            ]
-        }),
-        __metadata("design:paramtypes", [Renderer])
-    ], TooltipArea);
     return TooltipArea;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "dims", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "xSet", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "xScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "yScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "results", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "colors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TooltipArea.prototype, "showPercentage", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], TooltipArea.prototype, "tooltipDisabled", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", TemplateRef)
+], TooltipArea.prototype, "tooltipTemplate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "hover", void 0);
+__decorate([
+    ViewChild('tooltipAnchor'),
+    __metadata("design:type", Object)
+], TooltipArea.prototype, "tooltipAnchor", void 0);
+TooltipArea = __decorate([
+    Component({
+        selector: 'g[ngx-charts-tooltip-area]',
+        template: "\n    <svg:g>\n      <svg:rect\n        class=\"tooltip-area\"\n        [attr.x]=\"0\"\n        y=\"0\"\n        [attr.width]=\"dims.width\"\n        [attr.height]=\"dims.height\"\n        style=\"opacity: 0; cursor: 'auto';\"\n        (mousemove)=\"mouseMove($event)\"\n        (mouseleave)=\"hideTooltip()\"\n      />\n      <xhtml:ng-template #defaultTooltipTemplate let-model=\"model\">\n        <xhtml:div class=\"area-tooltip-container\">\n          <xhtml:div\n            *ngFor=\"let tooltipItem of model\"\n            class=\"tooltip-item\">\n            <span\n              class=\"tooltip-item-color\"\n              [style.background-color]=\"tooltipItem.color\">\n            </span>\n            {{getToolTipText(tooltipItem)}}\n          </xhtml:div>\n        </xhtml:div>\n      </xhtml:ng-template>\n      <svg:rect\n        #tooltipAnchor\n        [@animationState]=\"anchorOpacity !== 0 ? 'active' : 'inactive'\"\n        class=\"tooltip-anchor\"\n        [attr.x]=\"anchorPos\"\n        y=\"0\"\n        [attr.width]=\"1\"\n        [attr.height]=\"dims.height\"\n        [style.opacity]=\"anchorOpacity\"\n        [style.pointer-events]=\"'none'\"\n        ngx-tooltip\n        [tooltipDisabled]=\"tooltipDisabled\"\n        [tooltipPlacement]=\"'right'\"\n        [tooltipType]=\"'tooltip'\"\n        [tooltipSpacing]=\"15\"\n        [tooltipTemplate]=\"tooltipTemplate ? tooltipTemplate: defaultTooltipTemplate\"\n        [tooltipContext]=\"anchorValues\"\n        [tooltipImmediateExit]=\"true\"\n      />\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush,
+        animations: [
+            trigger('animationState', [
+                transition('inactive => active', [
+                    style({
+                        opacity: 0,
+                    }),
+                    animate(250, style({ opacity: 0.7 }))
+                ]),
+                transition('active => inactive', [
+                    style({
+                        opacity: 0.7,
+                    }),
+                    animate(250, style({ opacity: 0 }))
+                ])
+            ])
+        ]
+    }),
+    __metadata("design:paramtypes", [Renderer])
+], TooltipArea);
 export { TooltipArea };
 //# sourceMappingURL=tooltip-area.component.js.map

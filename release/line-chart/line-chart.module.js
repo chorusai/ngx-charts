@@ -10,25 +10,25 @@ import { LineComponent } from './line.component';
 import { LineChartComponent } from './line-chart.component';
 import { LineSeriesComponent } from './line-series.component';
 export { LineComponent, LineChartComponent, LineSeriesComponent };
-var LineChartModule = /** @class */ (function () {
+var LineChartModule = (function () {
     function LineChartModule() {
     }
-    LineChartModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule],
-            declarations: [
-                LineComponent,
-                LineChartComponent,
-                LineSeriesComponent
-            ],
-            exports: [
-                LineComponent,
-                LineChartComponent,
-                LineSeriesComponent
-            ]
-        })
-    ], LineChartModule);
     return LineChartModule;
 }());
+LineChartModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule],
+        declarations: [
+            LineComponent,
+            LineChartComponent,
+            LineSeriesComponent
+        ],
+        exports: [
+            LineComponent,
+            LineChartComponent,
+            LineSeriesComponent
+        ]
+    })
+], LineChartModule);
 export { LineChartModule };
 //# sourceMappingURL=line-chart.module.js.map

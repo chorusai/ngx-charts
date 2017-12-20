@@ -10,25 +10,25 @@ import { HeatMapCellComponent } from './heat-map-cell.component';
 import { HeatCellSeriesComponent } from './heat-map-cell-series.component';
 import { HeatMapComponent } from './heat-map.component';
 export { HeatMapCellComponent, HeatCellSeriesComponent, HeatMapComponent };
-var HeatMapModule = /** @class */ (function () {
+var HeatMapModule = (function () {
     function HeatMapModule() {
     }
-    HeatMapModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule],
-            declarations: [
-                HeatMapCellComponent,
-                HeatCellSeriesComponent,
-                HeatMapComponent
-            ],
-            exports: [
-                HeatMapCellComponent,
-                HeatCellSeriesComponent,
-                HeatMapComponent
-            ]
-        })
-    ], HeatMapModule);
     return HeatMapModule;
 }());
+HeatMapModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule],
+        declarations: [
+            HeatMapCellComponent,
+            HeatCellSeriesComponent,
+            HeatMapComponent
+        ],
+        exports: [
+            HeatMapCellComponent,
+            HeatCellSeriesComponent,
+            HeatMapComponent
+        ]
+    })
+], HeatMapModule);
 export { HeatMapModule };
 //# sourceMappingURL=heat-map.module.js.map

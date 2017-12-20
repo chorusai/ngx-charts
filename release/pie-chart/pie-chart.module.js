@@ -14,33 +14,33 @@ import { PieGridComponent } from './pie-grid.component';
 import { PieGridSeriesComponent } from './pie-grid-series.component';
 import { PieSeriesComponent } from './pie-series.component';
 export { AdvancedPieChartComponent, PieLabelComponent, PieArcComponent, PieChartComponent, PieGridComponent, PieGridSeriesComponent, PieSeriesComponent };
-var PieChartModule = /** @class */ (function () {
+var PieChartModule = (function () {
     function PieChartModule() {
     }
-    PieChartModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule],
-            declarations: [
-                AdvancedPieChartComponent,
-                PieLabelComponent,
-                PieArcComponent,
-                PieChartComponent,
-                PieGridComponent,
-                PieGridSeriesComponent,
-                PieSeriesComponent
-            ],
-            exports: [
-                AdvancedPieChartComponent,
-                PieLabelComponent,
-                PieArcComponent,
-                PieChartComponent,
-                PieGridComponent,
-                PieGridSeriesComponent,
-                PieSeriesComponent
-            ]
-        })
-    ], PieChartModule);
     return PieChartModule;
 }());
+PieChartModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule],
+        declarations: [
+            AdvancedPieChartComponent,
+            PieLabelComponent,
+            PieArcComponent,
+            PieChartComponent,
+            PieGridComponent,
+            PieGridSeriesComponent,
+            PieSeriesComponent
+        ],
+        exports: [
+            AdvancedPieChartComponent,
+            PieLabelComponent,
+            PieArcComponent,
+            PieChartComponent,
+            PieGridComponent,
+            PieGridSeriesComponent,
+            PieSeriesComponent
+        ]
+    })
+], PieChartModule);
 export { PieChartModule };
 //# sourceMappingURL=pie-chart.module.js.map

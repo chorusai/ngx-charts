@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, Input, Output, EventEmitter, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { pie } from 'd3-shape';
-var PieGridSeriesComponent = /** @class */ (function () {
+var PieGridSeriesComponent = (function () {
     function PieGridSeriesComponent(element) {
         this.innerRadius = 70;
         this.outerRadius = 80;
@@ -60,39 +60,39 @@ var PieGridSeriesComponent = /** @class */ (function () {
     PieGridSeriesComponent.prototype.color = function (arc) {
         return this.colors(this.label(arc));
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieGridSeriesComponent.prototype, "colors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieGridSeriesComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieGridSeriesComponent.prototype, "innerRadius", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PieGridSeriesComponent.prototype, "outerRadius", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PieGridSeriesComponent.prototype, "animations", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], PieGridSeriesComponent.prototype, "select", void 0);
-    PieGridSeriesComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-pie-grid-series]',
-            template: "\n    <svg:g class=\"pie-grid-arcs\">\n      <svg:g ngx-charts-pie-arc *ngFor=\"let arc of arcs; trackBy:trackBy\"\n        [attr.class]=\"arc.class\"\n        [startAngle]=\"arc.startAngle\"\n        [endAngle]=\"arc.endAngle\"\n        [innerRadius]=\"innerRadius\"\n        [outerRadius]=\"outerRadius\"\n        [fill]=\"color(arc)\"\n        [value]=\"arc.data.value\"\n        [data]=\"arc.data\"\n        [max]=\"max\"\n        [gradient]=\"false\"\n        [pointerEvents]=\"arc.pointerEvents\"\n        [animate]=\"arc.animate\"\n        (select)=\"onClick($event)\">\n      </svg:g>\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush,
-        }),
-        __metadata("design:paramtypes", [ElementRef])
-    ], PieGridSeriesComponent);
     return PieGridSeriesComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieGridSeriesComponent.prototype, "colors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieGridSeriesComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieGridSeriesComponent.prototype, "innerRadius", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PieGridSeriesComponent.prototype, "outerRadius", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PieGridSeriesComponent.prototype, "animations", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], PieGridSeriesComponent.prototype, "select", void 0);
+PieGridSeriesComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-pie-grid-series]',
+        template: "\n    <svg:g class=\"pie-grid-arcs\">\n      <svg:g ngx-charts-pie-arc *ngFor=\"let arc of arcs; trackBy:trackBy\"\n        [attr.class]=\"arc.class\"\n        [startAngle]=\"arc.startAngle\"\n        [endAngle]=\"arc.endAngle\"\n        [innerRadius]=\"innerRadius\"\n        [outerRadius]=\"outerRadius\"\n        [fill]=\"color(arc)\"\n        [value]=\"arc.data.value\"\n        [data]=\"arc.data\"\n        [max]=\"max\"\n        [gradient]=\"false\"\n        [pointerEvents]=\"arc.pointerEvents\"\n        [animate]=\"arc.animate\"\n        (select)=\"onClick($event)\">\n      </svg:g>\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush,
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], PieGridSeriesComponent);
 export { PieGridSeriesComponent };
 //# sourceMappingURL=pie-grid-series.component.js.map

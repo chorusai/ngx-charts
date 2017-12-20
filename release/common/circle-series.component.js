@@ -11,7 +11,7 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, Templa
 import { trigger, style, animate, transition } from '@angular/animations';
 import { formatLabel } from '../common/label.helper';
 import { id } from '../utils/id';
-var CircleSeriesComponent = /** @class */ (function () {
+var CircleSeriesComponent = (function () {
     function CircleSeriesComponent() {
         this.type = 'standard';
         this.tooltipDisabled = false;
@@ -161,76 +161,76 @@ var CircleSeriesComponent = /** @class */ (function () {
         this.circle.opacity = 0;
         this.deactivate.emit({ name: this.data.name });
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "type", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "xScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "yScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "colors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "scaleType", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "visibleValue", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], CircleSeriesComponent.prototype, "activeEntries", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], CircleSeriesComponent.prototype, "tooltipDisabled", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", TemplateRef)
-    ], CircleSeriesComponent.prototype, "tooltipTemplate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "select", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "activate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", Object)
-    ], CircleSeriesComponent.prototype, "deactivate", void 0);
-    CircleSeriesComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-circle-series]',
-            template: "\n    <svg:g *ngIf=\"circle\">\n      <defs>\n        <svg:g ngx-charts-svg-linear-gradient\n          orientation=\"vertical\"\n          [name]=\"gradientId\"\n          [stops]=\"circle.gradientStops\"\n        />\n      </defs>\n      <svg:rect\n        *ngIf=\"barVisible && type === 'standard'\"\n        [@animationState]=\"'active'\"\n        [attr.x]=\"circle.cx - circle.radius\"\n        [attr.y]=\"circle.cy\"\n        [attr.width]=\"circle.radius * 2\"\n        [attr.height]=\"circle.height\"\n        [attr.fill]=\"gradientFill\"\n        class=\"tooltip-bar\"\n      />\n      <svg:g ngx-charts-circle\n        class=\"circle\"\n        [cx]=\"circle.cx\"\n        [cy]=\"circle.cy\"\n        [r]=\"circle.radius\"\n        [fill]=\"circle.color\"\n        [class.active]=\"isActive({name: circle.seriesName})\"\n        [pointerEvents]=\"circle.value === 0 ? 'none': 'all'\"\n        [data]=\"circle.value\"\n        [classNames]=\"circle.classNames\"\n        (select)=\"onClick($event, circle.label)\"\n        (activate)=\"activateCircle()\"\n        (deactivate)=\"deactivateCircle()\"\n        ngx-tooltip\n        [tooltipDisabled]=\"tooltipDisabled\"\n        [tooltipPlacement]=\"'top'\"\n        [tooltipType]=\"'tooltip'\"\n        [tooltipTitle]=\"tooltipTemplate ? undefined : getTooltipText(circle)\"\n        [tooltipTemplate]=\"tooltipTemplate\"\n        [tooltipContext]=\"circle.data\"\n      />\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush,
-            animations: [
-                trigger('animationState', [
-                    transition(':enter', [
-                        style({
-                            opacity: 0,
-                        }),
-                        animate(250, style({ opacity: 1 }))
-                    ])
-                ])
-            ]
-        })
-    ], CircleSeriesComponent);
     return CircleSeriesComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "type", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "xScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "yScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "colors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "scaleType", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "visibleValue", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], CircleSeriesComponent.prototype, "activeEntries", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], CircleSeriesComponent.prototype, "tooltipDisabled", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", TemplateRef)
+], CircleSeriesComponent.prototype, "tooltipTemplate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "select", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "activate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", Object)
+], CircleSeriesComponent.prototype, "deactivate", void 0);
+CircleSeriesComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-circle-series]',
+        template: "\n    <svg:g *ngIf=\"circle\">\n      <defs>\n        <svg:g ngx-charts-svg-linear-gradient\n          orientation=\"vertical\"\n          [name]=\"gradientId\"\n          [stops]=\"circle.gradientStops\"\n        />\n      </defs>\n      <svg:rect\n        *ngIf=\"barVisible && type === 'standard'\"\n        [@animationState]=\"'active'\"\n        [attr.x]=\"circle.cx - circle.radius\"\n        [attr.y]=\"circle.cy\"\n        [attr.width]=\"circle.radius * 2\"\n        [attr.height]=\"circle.height\"\n        [attr.fill]=\"gradientFill\"\n        class=\"tooltip-bar\"\n      />\n      <svg:g ngx-charts-circle\n        class=\"circle\"\n        [cx]=\"circle.cx\"\n        [cy]=\"circle.cy\"\n        [r]=\"circle.radius\"\n        [fill]=\"circle.color\"\n        [class.active]=\"isActive({name: circle.seriesName})\"\n        [pointerEvents]=\"circle.value === 0 ? 'none': 'all'\"\n        [data]=\"circle.value\"\n        [classNames]=\"circle.classNames\"\n        (select)=\"onClick($event, circle.label)\"\n        (activate)=\"activateCircle()\"\n        (deactivate)=\"deactivateCircle()\"\n        ngx-tooltip\n        [tooltipDisabled]=\"tooltipDisabled\"\n        [tooltipPlacement]=\"'top'\"\n        [tooltipType]=\"'tooltip'\"\n        [tooltipTitle]=\"tooltipTemplate ? undefined : getTooltipText(circle)\"\n        [tooltipTemplate]=\"tooltipTemplate\"\n        [tooltipContext]=\"circle.data\"\n      />\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush,
+        animations: [
+            trigger('animationState', [
+                transition(':enter', [
+                    style({
+                        opacity: 0,
+                    }),
+                    animate(250, style({ opacity: 1 }))
+                ])
+            ])
+        ]
+    })
+], CircleSeriesComponent);
 export { CircleSeriesComponent };
 //# sourceMappingURL=circle-series.component.js.map

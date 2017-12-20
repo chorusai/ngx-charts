@@ -11,17 +11,17 @@ import { XAxisTicksComponent } from './x-axis-ticks.component';
 import { YAxisComponent } from './y-axis.component';
 import { YAxisTicksComponent } from './y-axis-ticks.component';
 import { CommonModule } from '@angular/common';
-var AxesModule = /** @class */ (function () {
+var AxesModule = (function () {
     function AxesModule() {
     }
-    AxesModule = __decorate([
-        NgModule({
-            imports: [CommonModule],
-            declarations: [AxisLabelComponent, XAxisComponent, XAxisTicksComponent, YAxisComponent, YAxisTicksComponent],
-            exports: [AxisLabelComponent, XAxisComponent, XAxisTicksComponent, YAxisComponent, YAxisTicksComponent]
-        })
-    ], AxesModule);
     return AxesModule;
 }());
+AxesModule = __decorate([
+    NgModule({
+        imports: [CommonModule],
+        declarations: [AxisLabelComponent, XAxisComponent, XAxisTicksComponent, YAxisComponent, YAxisTicksComponent],
+        exports: [AxisLabelComponent, XAxisComponent, XAxisTicksComponent, YAxisComponent, YAxisTicksComponent]
+    })
+], AxesModule);
 export { AxesModule };
 //# sourceMappingURL=axes.module.js.map

@@ -11,23 +11,23 @@ import { PolarSeriesComponent } from './polar-series.component';
 import { PieChartModule } from '../pie-chart/';
 import { LineChartModule } from '../line-chart/';
 export { PolarChartComponent, PolarSeriesComponent };
-var PolarChartModule = /** @class */ (function () {
+var PolarChartModule = (function () {
     function PolarChartModule() {
     }
-    PolarChartModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule, PieChartModule, LineChartModule],
-            declarations: [
-                PolarChartComponent,
-                PolarSeriesComponent
-            ],
-            exports: [
-                PolarChartComponent,
-                PolarSeriesComponent
-            ]
-        })
-    ], PolarChartModule);
     return PolarChartModule;
 }());
+PolarChartModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule, PieChartModule, LineChartModule],
+        declarations: [
+            PolarChartComponent,
+            PolarSeriesComponent
+        ],
+        exports: [
+            PolarChartComponent,
+            PolarSeriesComponent
+        ]
+    })
+], PolarChartModule);
 export { PolarChartModule };
 //# sourceMappingURL=polar-chart.module.js.map

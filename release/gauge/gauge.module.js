@@ -13,27 +13,27 @@ import { GaugeAxisComponent } from './gauge-axis.component';
 import { PieChartModule } from '../pie-chart/pie-chart.module';
 import { BarChartModule } from '../bar-chart/bar-chart.module';
 export { GaugeComponent, GaugeArcComponent, GaugeAxisComponent, LinearGaugeComponent };
-var GaugeModule = /** @class */ (function () {
+var GaugeModule = (function () {
     function GaugeModule() {
     }
-    GaugeModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule, PieChartModule, BarChartModule],
-            declarations: [
-                LinearGaugeComponent,
-                GaugeComponent,
-                GaugeArcComponent,
-                GaugeAxisComponent
-            ],
-            exports: [
-                LinearGaugeComponent,
-                GaugeComponent,
-                GaugeArcComponent,
-                GaugeAxisComponent
-            ]
-        })
-    ], GaugeModule);
     return GaugeModule;
 }());
+GaugeModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule, PieChartModule, BarChartModule],
+        declarations: [
+            LinearGaugeComponent,
+            GaugeComponent,
+            GaugeArcComponent,
+            GaugeAxisComponent
+        ],
+        exports: [
+            LinearGaugeComponent,
+            GaugeComponent,
+            GaugeArcComponent,
+            GaugeAxisComponent
+        ]
+    })
+], GaugeModule);
 export { GaugeModule };
 //# sourceMappingURL=gauge.module.js.map

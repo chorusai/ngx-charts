@@ -10,25 +10,25 @@ import { CardComponent } from './card.component';
 import { CardSeriesComponent } from './card-series.component';
 import { NumberCardComponent } from './number-card.component';
 export { CardComponent, CardSeriesComponent, NumberCardComponent };
-var NumberCardModule = /** @class */ (function () {
+var NumberCardModule = (function () {
     function NumberCardModule() {
     }
-    NumberCardModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule],
-            declarations: [
-                CardComponent,
-                CardSeriesComponent,
-                NumberCardComponent
-            ],
-            exports: [
-                CardComponent,
-                CardSeriesComponent,
-                NumberCardComponent
-            ]
-        })
-    ], NumberCardModule);
     return NumberCardModule;
 }());
+NumberCardModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule],
+        declarations: [
+            CardComponent,
+            CardSeriesComponent,
+            NumberCardComponent
+        ],
+        exports: [
+            CardComponent,
+            CardSeriesComponent,
+            NumberCardComponent
+        ]
+    })
+], NumberCardModule);
 export { NumberCardModule };
 //# sourceMappingURL=number-card.module.js.map

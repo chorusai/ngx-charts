@@ -1,13 +1,8 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -23,7 +18,7 @@ import { scaleBand, scaleLinear } from 'd3-scale';
 import { calculateViewDimensions } from '../common/view-dimensions.helper';
 import { ColorHelper } from '../common/color.helper';
 import { BaseChartComponent } from '../common/base-chart.component';
-var BarVerticalStackedComponent = /** @class */ (function (_super) {
+var BarVerticalStackedComponent = (function (_super) {
     __extends(BarVerticalStackedComponent, _super);
     function BarVerticalStackedComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
@@ -194,111 +189,111 @@ var BarVerticalStackedComponent = /** @class */ (function (_super) {
         this.activeEntries = this.activeEntries.slice();
         this.deactivate.emit({ value: item, entries: this.activeEntries });
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "legend", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], BarVerticalStackedComponent.prototype, "legendTitle", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "xAxis", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "yAxis", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "showXAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "showYAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "xAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "yAxisLabel", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarVerticalStackedComponent.prototype, "tooltipDisabled", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarVerticalStackedComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarVerticalStackedComponent.prototype, "showGridLines", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], BarVerticalStackedComponent.prototype, "activeEntries", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", String)
-    ], BarVerticalStackedComponent.prototype, "schemeType", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "xAxisTickFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "yAxisTickFormatting", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], BarVerticalStackedComponent.prototype, "barPadding", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], BarVerticalStackedComponent.prototype, "roundDomains", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], BarVerticalStackedComponent.prototype, "yScaleMax", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", EventEmitter)
-    ], BarVerticalStackedComponent.prototype, "activate", void 0);
-    __decorate([
-        Output(),
-        __metadata("design:type", EventEmitter)
-    ], BarVerticalStackedComponent.prototype, "deactivate", void 0);
-    __decorate([
-        ContentChild('tooltipTemplate'),
-        __metadata("design:type", TemplateRef)
-    ], BarVerticalStackedComponent.prototype, "tooltipTemplate", void 0);
-    BarVerticalStackedComponent = __decorate([
-        Component({
-            selector: 'ngx-charts-bar-vertical-stacked',
-            template: "\n    <ngx-charts-chart\n      [view]=\"[width, height]\"\n      [showLegend]=\"legend\"\n      [legendOptions]=\"legendOptions\"\n      [activeEntries]=\"activeEntries\"\n      [animations]=\"animations\"\n      (legendLabelActivate)=\"onActivate($event)\"\n      (legendLabelDeactivate)=\"onDeactivate($event)\"\n      (legendLabelClick)=\"onClick($event)\">\n      <svg:g [attr.transform]=\"transform\" class=\"bar-chart chart\">\n        <svg:g ngx-charts-x-axis\n          *ngIf=\"xAxis\"\n          [xScale]=\"xScale\"\n          [dims]=\"dims\"\n          [showLabel]=\"showXAxisLabel\"\n          [labelText]=\"xAxisLabel\"\n          [tickFormatting]=\"xAxisTickFormatting\"\n          (dimensionsChanged)=\"updateXAxisHeight($event)\">\n        </svg:g>\n        <svg:g ngx-charts-y-axis\n          *ngIf=\"yAxis\"\n          [yScale]=\"yScale\"\n          [dims]=\"dims\"\n          [showGridLines]=\"showGridLines\"\n          [showLabel]=\"showYAxisLabel\"\n          [labelText]=\"yAxisLabel\"\n          [tickFormatting]=\"yAxisTickFormatting\"\n          (dimensionsChanged)=\"updateYAxisWidth($event)\">\n        </svg:g>\n        <svg:g\n          *ngFor=\"let group of results; trackBy:trackBy\"\n          [@animationState]=\"'active'\"\n          [attr.transform]=\"groupTransform(group)\">\n          <svg:g ngx-charts-series-vertical\n            type=\"stacked\"\n            [xScale]=\"xScale\"\n            [yScale]=\"yScale\"\n            [activeEntries]=\"activeEntries\"\n            [colors]=\"colors\"\n            [series]=\"group.series\"\n            [dims]=\"dims\"\n            [gradient]=\"gradient\"\n            [tooltipDisabled]=\"tooltipDisabled\"\n            [tooltipTemplate]=\"tooltipTemplate\"\n            [seriesName]=\"group.name\"\n            [animations]=\"animations\"\n            (select)=\"onClick($event, group)\"\n            (activate)=\"onActivate($event, group)\"\n            (deactivate)=\"onDeactivate($event, group)\"\n          />\n        </svg:g>\n      </svg:g>\n    </ngx-charts-chart>\n  ",
-            styleUrls: ['../common/base-chart.component.css'],
-            encapsulation: ViewEncapsulation.None,
-            changeDetection: ChangeDetectionStrategy.OnPush,
-            animations: [
-                trigger('animationState', [
-                    transition(':leave', [
-                        style({
-                            opacity: 1,
-                            transform: '*',
-                        }),
-                        animate(500, style({ opacity: 0, transform: 'scale(0)' }))
-                    ])
-                ])
-            ]
-        })
-    ], BarVerticalStackedComponent);
     return BarVerticalStackedComponent;
 }(BaseChartComponent));
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "legend", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], BarVerticalStackedComponent.prototype, "legendTitle", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "xAxis", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "yAxis", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "showXAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "showYAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "xAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "yAxisLabel", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarVerticalStackedComponent.prototype, "tooltipDisabled", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarVerticalStackedComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarVerticalStackedComponent.prototype, "showGridLines", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], BarVerticalStackedComponent.prototype, "activeEntries", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", String)
+], BarVerticalStackedComponent.prototype, "schemeType", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "xAxisTickFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "yAxisTickFormatting", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], BarVerticalStackedComponent.prototype, "barPadding", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], BarVerticalStackedComponent.prototype, "roundDomains", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], BarVerticalStackedComponent.prototype, "yScaleMax", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", EventEmitter)
+], BarVerticalStackedComponent.prototype, "activate", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", EventEmitter)
+], BarVerticalStackedComponent.prototype, "deactivate", void 0);
+__decorate([
+    ContentChild('tooltipTemplate'),
+    __metadata("design:type", TemplateRef)
+], BarVerticalStackedComponent.prototype, "tooltipTemplate", void 0);
+BarVerticalStackedComponent = __decorate([
+    Component({
+        selector: 'ngx-charts-bar-vertical-stacked',
+        template: "\n    <ngx-charts-chart\n      [view]=\"[width, height]\"\n      [showLegend]=\"legend\"\n      [legendOptions]=\"legendOptions\"\n      [activeEntries]=\"activeEntries\"\n      [animations]=\"animations\"\n      (legendLabelActivate)=\"onActivate($event)\"\n      (legendLabelDeactivate)=\"onDeactivate($event)\"\n      (legendLabelClick)=\"onClick($event)\">\n      <svg:g [attr.transform]=\"transform\" class=\"bar-chart chart\">\n        <svg:g ngx-charts-x-axis\n          *ngIf=\"xAxis\"\n          [xScale]=\"xScale\"\n          [dims]=\"dims\"\n          [showLabel]=\"showXAxisLabel\"\n          [labelText]=\"xAxisLabel\"\n          [tickFormatting]=\"xAxisTickFormatting\"\n          (dimensionsChanged)=\"updateXAxisHeight($event)\">\n        </svg:g>\n        <svg:g ngx-charts-y-axis\n          *ngIf=\"yAxis\"\n          [yScale]=\"yScale\"\n          [dims]=\"dims\"\n          [showGridLines]=\"showGridLines\"\n          [showLabel]=\"showYAxisLabel\"\n          [labelText]=\"yAxisLabel\"\n          [tickFormatting]=\"yAxisTickFormatting\"\n          (dimensionsChanged)=\"updateYAxisWidth($event)\">\n        </svg:g>\n        <svg:g\n          *ngFor=\"let group of results; trackBy:trackBy\"\n          [@animationState]=\"'active'\"\n          [attr.transform]=\"groupTransform(group)\">\n          <svg:g ngx-charts-series-vertical\n            type=\"stacked\"\n            [xScale]=\"xScale\"\n            [yScale]=\"yScale\"\n            [activeEntries]=\"activeEntries\"\n            [colors]=\"colors\"\n            [series]=\"group.series\"\n            [dims]=\"dims\"\n            [gradient]=\"gradient\"\n            [tooltipDisabled]=\"tooltipDisabled\"\n            [tooltipTemplate]=\"tooltipTemplate\"\n            [seriesName]=\"group.name\"\n            [animations]=\"animations\"\n            (select)=\"onClick($event, group)\"\n            (activate)=\"onActivate($event, group)\"\n            (deactivate)=\"onDeactivate($event, group)\"\n          />\n        </svg:g>\n      </svg:g>\n    </ngx-charts-chart>\n  ",
+        styleUrls: ['../common/base-chart.component.css'],
+        encapsulation: ViewEncapsulation.None,
+        changeDetection: ChangeDetectionStrategy.OnPush,
+        animations: [
+            trigger('animationState', [
+                transition(':leave', [
+                    style({
+                        opacity: 1,
+                        transform: '*',
+                    }),
+                    animate(500, style({ opacity: 0, transform: 'scale(0)' }))
+                ])
+            ])
+        ]
+    })
+], BarVerticalStackedComponent);
 export { BarVerticalStackedComponent };
 //# sourceMappingURL=bar-vertical-stacked.component.js.map

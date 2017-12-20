@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-var ScaleLegendComponent = /** @class */ (function () {
+var ScaleLegendComponent = (function () {
     function ScaleLegendComponent(sanitizer) {
         this.sanitizer = sanitizer;
     }
@@ -32,33 +32,33 @@ var ScaleLegendComponent = /** @class */ (function () {
         });
         return pairs.join(', ');
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], ScaleLegendComponent.prototype, "valueRange", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], ScaleLegendComponent.prototype, "colors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], ScaleLegendComponent.prototype, "height", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], ScaleLegendComponent.prototype, "width", void 0);
-    ScaleLegendComponent = __decorate([
-        Component({
-            selector: 'ngx-charts-scale-legend',
-            template: "\n    <div\n      class=\"scale-legend\"\n      [style.height.px]=\"height\"\n      [style.width.px]=\"width\">\n      <div class=\"scale-legend-label\">\n        <span>{{ valueRange[1].toLocaleString() }}</span>\n      </div>\n      <div\n        class=\"scale-legend-wrap\"\n        [style.background]=\"gradient\">\n      </div>\n      <div class=\"scale-legend-label\">\n        <span>{{ valueRange[0].toLocaleString() }}</span>\n      </div>\n    </div>\n  ",
-            styleUrls: ['./scale-legend.component.css'],
-            encapsulation: ViewEncapsulation.None,
-            changeDetection: ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [DomSanitizer])
-    ], ScaleLegendComponent);
     return ScaleLegendComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], ScaleLegendComponent.prototype, "valueRange", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], ScaleLegendComponent.prototype, "colors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], ScaleLegendComponent.prototype, "height", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], ScaleLegendComponent.prototype, "width", void 0);
+ScaleLegendComponent = __decorate([
+    Component({
+        selector: 'ngx-charts-scale-legend',
+        template: "\n    <div\n      class=\"scale-legend\"\n      [style.height.px]=\"height\"\n      [style.width.px]=\"width\">\n      <div class=\"scale-legend-label\">\n        <span>{{ valueRange[1].toLocaleString() }}</span>\n      </div>\n      <div\n        class=\"scale-legend-wrap\"\n        [style.background]=\"gradient\">\n      </div>\n      <div class=\"scale-legend-label\">\n        <span>{{ valueRange[0].toLocaleString() }}</span>\n      </div>\n    </div>\n  ",
+        styleUrls: ['./scale-legend.component.css'],
+        encapsulation: ViewEncapsulation.None,
+        changeDetection: ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [DomSanitizer])
+], ScaleLegendComponent);
 export { ScaleLegendComponent };
 //# sourceMappingURL=scale-legend.component.js.map

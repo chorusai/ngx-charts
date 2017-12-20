@@ -11,27 +11,27 @@ import { AreaChartStackedComponent } from './area-chart-stacked.component';
 import { AreaSeriesComponent } from './area-series.component';
 import { ChartCommonModule } from '../common/chart-common.module';
 export { AreaChartComponent, AreaChartNormalizedComponent, AreaChartStackedComponent, AreaSeriesComponent };
-var AreaChartModule = /** @class */ (function () {
+var AreaChartModule = (function () {
     function AreaChartModule() {
     }
-    AreaChartModule = __decorate([
-        NgModule({
-            imports: [ChartCommonModule],
-            declarations: [
-                AreaChartComponent,
-                AreaChartNormalizedComponent,
-                AreaChartStackedComponent,
-                AreaSeriesComponent
-            ],
-            exports: [
-                AreaChartComponent,
-                AreaChartNormalizedComponent,
-                AreaChartStackedComponent,
-                AreaSeriesComponent
-            ]
-        })
-    ], AreaChartModule);
     return AreaChartModule;
 }());
+AreaChartModule = __decorate([
+    NgModule({
+        imports: [ChartCommonModule],
+        declarations: [
+            AreaChartComponent,
+            AreaChartNormalizedComponent,
+            AreaChartStackedComponent,
+            AreaSeriesComponent
+        ],
+        exports: [
+            AreaChartComponent,
+            AreaChartNormalizedComponent,
+            AreaChartStackedComponent,
+            AreaSeriesComponent
+        ]
+    })
+], AreaChartModule);
 export { AreaChartModule };
 //# sourceMappingURL=area-chart.module.js.map

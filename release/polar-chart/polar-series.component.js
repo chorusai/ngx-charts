@@ -11,7 +11,7 @@ import { Component, Input, ChangeDetectionStrategy, TemplateRef } from '@angular
 import { radialLine } from 'd3-shape';
 import { id } from '../utils/id';
 import { sortLinear, sortByTime, sortByDomain } from '../utils/sort';
-var PolarSeriesComponent = /** @class */ (function () {
+var PolarSeriesComponent = (function () {
     function PolarSeriesComponent() {
         this.tooltipDisabled = false;
         this.gradient = false;
@@ -120,70 +120,70 @@ var PolarSeriesComponent = /** @class */ (function () {
             this.gradientStops = undefined;
         }
     };
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "name", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "data", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "xScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "yScale", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "colors", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "scaleType", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Object)
-    ], PolarSeriesComponent.prototype, "curve", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Array)
-    ], PolarSeriesComponent.prototype, "activeEntries", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Number)
-    ], PolarSeriesComponent.prototype, "rangeFillOpacity", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PolarSeriesComponent.prototype, "tooltipDisabled", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Function)
-    ], PolarSeriesComponent.prototype, "tooltipText", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PolarSeriesComponent.prototype, "gradient", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", TemplateRef)
-    ], PolarSeriesComponent.prototype, "tooltipTemplate", void 0);
-    __decorate([
-        Input(),
-        __metadata("design:type", Boolean)
-    ], PolarSeriesComponent.prototype, "animations", void 0);
-    PolarSeriesComponent = __decorate([
-        Component({
-            selector: 'g[ngx-charts-polar-series]',
-            template: "\n    <svg:g class=\"polar-charts-series\">\n      <defs>\n        <svg:g ngx-charts-svg-radial-gradient *ngIf=\"hasGradient\"\n          orientation=\"vertical\"\n          [color]=\"seriesColor\"\n          [name]=\"gradientId\"\n          [startOpacity]=\"0.25\"\n          [endOpacity]=\"1\"\n          [stops]=\"gradientStops\"\n        />\n      </defs>\n      <svg:g ngx-charts-line\n        class=\"polar-series-path\"\n        [path]=\"path\"\n        [stroke]=\"hasGradient ? gradientUrl : seriesColor\"\n        [class.active]=\"active\"\n        [class.inactive]=\"inactive\"\n        [attr.fill-opacity]=\"rangeFillOpacity\"\n        [fill]=\"hasGradient ? gradientUrl : seriesColor\"\n        [animations]=\"animations\"\n      />\n      <svg:g ngx-charts-circle\n        *ngFor=\"let circle of circles\"\n        class=\"circle\"\n        [cx]=\"circle.cx\"\n        [cy]=\"circle.cy\"\n        [r]=\"circleRadius\"\n        [fill]=\"circle.color\"\n        [style.opacity]=\"inactive ? 0.2 : 1\"\n        ngx-tooltip\n        [tooltipDisabled]=\"tooltipDisabled\"\n        [tooltipPlacement]=\"'top'\"\n        tooltipType=\"tooltip\"\n        [tooltipTitle]=\"tooltipTemplate ? undefined : tooltipText(circle)\"\n        [tooltipTemplate]=\"tooltipTemplate\"\n        [tooltipContext]=\"circle.data\">\n      </svg:g>\n    </svg:g>\n  ",
-            changeDetection: ChangeDetectionStrategy.OnPush
-        })
-    ], PolarSeriesComponent);
     return PolarSeriesComponent;
 }());
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "name", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "data", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "xScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "yScale", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "colors", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "scaleType", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], PolarSeriesComponent.prototype, "curve", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Array)
+], PolarSeriesComponent.prototype, "activeEntries", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Number)
+], PolarSeriesComponent.prototype, "rangeFillOpacity", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PolarSeriesComponent.prototype, "tooltipDisabled", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Function)
+], PolarSeriesComponent.prototype, "tooltipText", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PolarSeriesComponent.prototype, "gradient", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", TemplateRef)
+], PolarSeriesComponent.prototype, "tooltipTemplate", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", Boolean)
+], PolarSeriesComponent.prototype, "animations", void 0);
+PolarSeriesComponent = __decorate([
+    Component({
+        selector: 'g[ngx-charts-polar-series]',
+        template: "\n    <svg:g class=\"polar-charts-series\">\n      <defs>\n        <svg:g ngx-charts-svg-radial-gradient *ngIf=\"hasGradient\"\n          orientation=\"vertical\"\n          [color]=\"seriesColor\"\n          [name]=\"gradientId\"\n          [startOpacity]=\"0.25\"\n          [endOpacity]=\"1\"\n          [stops]=\"gradientStops\"\n        />\n      </defs>\n      <svg:g ngx-charts-line\n        class=\"polar-series-path\"\n        [path]=\"path\"\n        [stroke]=\"hasGradient ? gradientUrl : seriesColor\"\n        [class.active]=\"active\"\n        [class.inactive]=\"inactive\"\n        [attr.fill-opacity]=\"rangeFillOpacity\"\n        [fill]=\"hasGradient ? gradientUrl : seriesColor\"\n        [animations]=\"animations\"\n      />\n      <svg:g ngx-charts-circle\n        *ngFor=\"let circle of circles\"\n        class=\"circle\"\n        [cx]=\"circle.cx\"\n        [cy]=\"circle.cy\"\n        [r]=\"circleRadius\"\n        [fill]=\"circle.color\"\n        [style.opacity]=\"inactive ? 0.2 : 1\"\n        ngx-tooltip\n        [tooltipDisabled]=\"tooltipDisabled\"\n        [tooltipPlacement]=\"'top'\"\n        tooltipType=\"tooltip\"\n        [tooltipTitle]=\"tooltipTemplate ? undefined : tooltipText(circle)\"\n        [tooltipTemplate]=\"tooltipTemplate\"\n        [tooltipContext]=\"circle.data\">\n      </svg:g>\n    </svg:g>\n  ",
+        changeDetection: ChangeDetectionStrategy.OnPush
+    })
+], PolarSeriesComponent);
 export { PolarSeriesComponent };
 //# sourceMappingURL=polar-series.component.js.map
