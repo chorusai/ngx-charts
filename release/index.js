@@ -7027,7 +7027,7 @@ var SeriesHorizontal = (function () {
                 tooltipLabel = _this.seriesName + " \u2022 " + formattedLabel;
                 bar.data.series = _this.seriesName;
             }
-            bar.tooltipText = _this.tooltipDisabled ? undefined : "\n        <span class=\"tooltip-label\">" + tooltipLabel + "</span>\n        <span class=\"tooltip-val\">" + (value ? value.toLocaleString() : '') + "</span>\n      ";
+            bar.tooltipText = _this.tooltipDisabled ? undefined : "\n        <span class=\"tooltip-label\">" + tooltipLabel + "</span>\n        <span class=\"tooltip-val\">" + (value ? value.toLocaleString() : value) + "</span>\n      ";
             return bar;
         });
     };
@@ -9971,11 +9971,11 @@ var ColorHelper = (function () {
             return (this.scale(valueScale(value)));
         }
         else {
-            var formattedValue_1 = value.toString();
+            var formattedValue_1 = value ? value.toString() : value;
             var found = void 0; // todo type customColors
             if (this.customColors && this.customColors.length > 0) {
                 found = this.customColors.find(function (mapping) {
-                    return mapping.name.toLowerCase() === formattedValue_1.toLowerCase();
+                    return mapping.name.toLowerCase() === (formattedValue_1 ? formattedValue_1.toLowerCase() : formattedValue_1);
                 });
             }
             if (found) {

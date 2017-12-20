@@ -100,7 +100,7 @@ var SeriesHorizontal = (function () {
                 tooltipLabel = _this.seriesName + " \u2022 " + formattedLabel;
                 bar.data.series = _this.seriesName;
             }
-            bar.tooltipText = _this.tooltipDisabled ? undefined : "\n        <span class=\"tooltip-label\">" + tooltipLabel + "</span>\n        <span class=\"tooltip-val\">" + (value ? value.toLocaleString() : '') + "</span>\n      ";
+            bar.tooltipText = _this.tooltipDisabled ? undefined : "\n        <span class=\"tooltip-label\">" + tooltipLabel + "</span>\n        <span class=\"tooltip-val\">" + (value ? value.toLocaleString() : value) + "</span>\n      ";
             return bar;
         });
     };

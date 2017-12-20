@@ -53,11 +53,11 @@ var ColorHelper = (function () {
             return (this.scale(valueScale(value)));
         }
         else {
-            var formattedValue_1 = value.toString();
+            var formattedValue_1 = value ? value.toString() : value;
             var found = void 0; // todo type customColors
             if (this.customColors && this.customColors.length > 0) {
                 found = this.customColors.find(function (mapping) {
-                    return mapping.name.toLowerCase() === formattedValue_1.toLowerCase();
+                    return mapping.name.toLowerCase() === (formattedValue_1 ? formattedValue_1.toLowerCase() : formattedValue_1);
                 });
             }
             if (found) {

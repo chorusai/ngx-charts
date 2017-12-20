@@ -171,7 +171,7 @@ export class SeriesHorizontal implements OnChanges {
 
       bar.tooltipText = this.tooltipDisabled ? undefined : `
         <span class="tooltip-label">${tooltipLabel}</span>
-        <span class="tooltip-val">${value ? value.toLocaleString() : ''}</span>
+        <span class="tooltip-val">${value ? value.toLocaleString() : value}</span>
       `;
 
       return bar;

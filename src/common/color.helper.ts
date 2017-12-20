@@ -66,11 +66,11 @@ export class ColorHelper {
 
       return (this.scale(valueScale(value)));
     } else {
-      const formattedValue = value.toString();
+      const formattedValue = value ? value.toString() : value;
       let found: any; // todo type customColors
       if (this.customColors && this.customColors.length > 0) {
         found = this.customColors.find((mapping) => {
-          return mapping.name.toLowerCase() === formattedValue.toLowerCase();
+          return mapping.name.toLowerCase() === (formattedValue ? formattedValue.toLowerCase() : formattedValue);
         });
       }
 
