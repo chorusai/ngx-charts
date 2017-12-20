@@ -62,7 +62,7 @@ var BarHorizontal2DComponent = (function (_super) {
         this.valueScale = this.getValueScale();
         this.setColors();
         this.legendOptions = this.getLegendOptions();
-        this.transform = "translate(" + this.dims.xOffset + " , " + this.margin[0] + ")";
+        this.transform = "translate(100 , " + this.margin[0] + ")";
     };
     BarHorizontal2DComponent.prototype.getGroupScale = function () {
         var spacing = this.groupDomain.length / (this.dims.height / this.groupPadding + 1);
