@@ -10631,7 +10631,7 @@ GridPanelComponent = __decorate([
         label = label.toLocaleDateString();
     }
     else {
-        label = label.toLocaleString();
+        label = label ? label.toLocaleString() : label;
     }
     return label;
 }
