@@ -172,7 +172,7 @@ export class BarHorizontal2DComponent extends BaseChartComponent {
     this.setColors();
     this.legendOptions = this.getLegendOptions();
 
-    this.transform = `translate(${ this.dims.xOffset } , ${ this.margin[0] })`;
+    this.transform = `translate(100 , ${ this.margin[0] })`;
   }
 
   getGroupScale(): any {
